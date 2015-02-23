@@ -1,0 +1,605 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#bg_header_line {
+    width: 100%;
+    height: 10px;
+    background-image: url(../../Style/Images/bh_header.jpg);
+}
+
+#bg_header {
+    width: 100%;
+    height: 142px;
+    background-image: url(../../Style/Images/bg_header2.jpg);
+}
+
+#header_area {
+    width: 979px;
+    height: 142px;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 221px;
+    height: 78px;
+    float: left;
+    margin-top: 24px;
+}
+
+#title {
+    width: 701px;
+    height: 51px;
+    float: right;
+    margin-top: 44px;
+}
+
+#content_saudacao {
+    width: 943px;
+    height: 54px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #000;
+    font-size: 12px;
+    line-height: 54px;
+    border: 1px solid #ff6600;
+    padding: 0px 18px 0px 18px;
+    background-color: #f2f2f2;
+    float: left;
+}
+
+#side_saudacao {
+    float: left;
+    width: 700px;
+    height: 54px;
+}
+
+#bt_sair {
+    float: right;
+    width: 82px;
+    height: 28px;
+    margin-top: 10px;
+}
+
+#content {
+    widht: 100%;
+    height: auto;
+    min-height: 500px;
+    background-image: url(../../Style/Images/bg_content.jpg);
+    background-repeat: repeat-x;
+    background-color: #fefefe;
+    padding-top: 55px;
+}
+
+#content_acesso {
+    widht: 100%;
+    min-height: 515px;
+    background-image: url(../../Style/Images/bg_content.jpg);
+    background-repeat: repeat-x;
+    background-color: #fefefe;
+}
+
+#middle_content {
+    width: 979px;
+    height: 524px;
+    margin: 0 auto;
+}
+
+#middle_content1 {
+    width: 979px;
+    height: 710px;
+    margin: 0 auto;
+}
+
+#middle_content2 {
+    width: 979px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+#middle_content3 {
+    width: 979px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+#middle_content4 {
+    width: 979px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#footer {
+    width: 100%;
+    height: 160px;
+    background-image: url(../../Style/Images/footer_bg.jpg);
+    background-repeat: repeat-x;
+    clear: both;
+}
+
+#footer_area {
+    width: 979px;
+    height: 160px;
+    margin: 0 auto;
+}
+
+#text_footer_left {
+    width: 458px;
+    height: 100px;
+    float: left;
+    margin-top: 29px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #e7e7dc;
+}
+
+#login_left {
+    width: 489px;
+    height: 524px;
+    float: left;
+}
+
+#login_right {
+    width: 449px;
+    height: 492px;
+    float: left;
+    padding-top: 32px;
+    padding-left: 38px;
+}
+
+#title_login {
+    width: 489px;
+    height: 72px;
+    float: left;
+}
+
+#login_right input {
+    border: 2px solid #cfcfd0;
+    height: 37px;
+    width: 290px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
+    font-size: 14px;
+}
+
+#txt_login {
+    width: 454px;
+    height: 200px;
+    float: left;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #000;
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+.problems {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #ff6400;
+    text-decoration: none;
+}
+
+    .problems a {
+        color: #ff6400;
+        text-decoration: none;
+    }
+
+        .problems a:hover {
+            color: #ff6400;
+            text-decoration: underline;
+        }
+
+#login_divisoria {
+    width: 2px;
+    height: 513px;
+    float: left;
+    background-image: url(../../Style/Images/divisoria-login.png);
+}
+
+#search {
+    width: 979px;
+    height: 50px;
+    float: left;
+}
+
+#nav_footer {
+    width: 979px;
+    height: 30px;
+    border-bottom: 1px solid #9c9a9b;
+    float: left;
+    line-height: 30px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #e7e7dc;
+    text-decoration: none;
+}
+
+    #nav_footer a {
+        color: #e7e7dc;
+        text-decoration: none;
+    }
+
+#left_nav {
+    width: 196px;
+    height: 299px;
+    background-image: url(../../Style/Images/bg_menu.jpg);
+    float: left;
+}
+
+#nav_footer a:hover {
+    color: #e7e7dc;
+    text-decoration: underline;
+}
+
+#right_side {
+    width: 761px;
+    height: 400px;
+    margin-left: 17px;
+    float: left;
+}
+
+#right_side1 {
+    width: 724px;
+    height: 555px;
+    margin-left: 17px;
+    float: left;
+    background-color: #f5f3f3;
+    border: 1px solid #bbbbbb;
+    padding: 20px;
+}
+
+#right_side2 {
+    width: 724px;
+    height: auto;
+    margin-left: 17px;
+    float: left;
+    background-color: #f5f3f3;
+    border: 1px solid #bbbbbb;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.header_table {
+    background-image: url(../../Style/Images/bg_table.jpg);
+    font-size: 14px;
+}
+
+.border_table tr td {
+    border: 1px solid #bfbfbf;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    padding-left: 5px;
+    color: #000;
+}
+
+#copyright {
+    width: 305px;
+    height: 30px;
+    float: right;
+    margin-top: 44px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #c8c7c0;
+}
+
+.txt_form {
+    font-family: Arial Narrow;
+    font-size: 22px;
+    color: #454444;
+}
+
+#icon_table {
+    width: 18px;
+    height: 16px;
+    float: left;
+}
+
+#icon_table_txt {
+    width: 130px;
+    height: 16px;
+    float: left;
+    margin-left: 5px;
+}
+
+.com_class_pri {
+    border: 1px solid #bbbbbb;
+    height: 26px;
+    width: 192px;
+}
+
+.assunto {
+    border: 1px solid #bbbbbb;
+    height: 26px;
+    width: 395px;
+    padding-left: 5px;
+}
+
+.assuntoNew {
+    border: 1px solid #bbbbbb;
+    height: 26px;
+    width: 185px;
+    padding-left: 5px;
+}
+
+.comentarios {
+    border: 1px solid #bbbbbb;
+    height: 188px;
+    width: 621px;
+    padding-left: 5px;
+}
+
+.border_drop {
+    border: 1px solid #bfbfbf;
+}
+
+.search_iput {
+    width: 310px;
+    height: 20px;
+    border: 1px solid #bfbfbf;
+    padding-left: 5px;
+    color: #333;
+}
+
+.default {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    color: #000;
+}
+
+.default2 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    color: #878787;
+    text-decoration: none;
+    width: 220px;
+}
+
+    .default2 a {
+        color: #878787;
+        text-decoration: none;
+    }
+
+        .default2 a:hover {
+            color: #878787;
+            text-decoration: underline;
+        }
+
+.paginacao {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #ff0000;
+    text-decoration: none;
+}
+
+    .paginacao a {
+        color: #ff0000;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+    }
+
+        .paginacao a:hover {
+            color: #ff0000;
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+.alta {
+    color: #F00;
+}
+
+.media {
+    color: #3b9a80;
+}
+
+.btnAtender {
+    background-image: url(../../Style/Images/detalhe.png);
+    border: 0;
+    width: 26px;
+    height: 18px;
+    cursor: pointer;
+    float: right;
+    margin: 1px 30px 1px 1px;
+}
+
+.btnLogar {
+    background-image: url(../../Style/Images/entrar.png);
+    border: 0;
+    width: 83px;
+    height: 28px;
+    cursor: pointer;
+    float: right;
+    margin: 1px 10px 1px 1px;
+}
+
+.btnGravar {
+    background-image: url(../../Style/Images/enviar.png);
+    border: 0;
+    width: 82px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.btnLimpar {
+    background-image: url(../../Style/Images/cancelar.png);
+    border: 0;
+    width: 82px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.btnSair {
+    background-image: url(../../Style/Images/sair.png);
+    border: 0;
+    width: 82px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.btnFinalizar {
+    background-image: url(../../Style/Images/finalizar-chamado.png);
+    border: 0;
+    width: 131px;
+    height: 28px;
+    cursor: pointer;
+    float: left;
+    margin: 1px 1px 1px 1px;
+}
+
+.btnEncerrarr {
+    background-image: url(../../Style/Images/encerrar-chamado.png);
+    border: 0;
+    width: 131px;
+    height: 28px;
+    cursor: pointer;
+    float: left;
+    margin: 1px 1px 1px 1px;
+}
+
+.btnRecuperar {
+    background-image: url(../../Style/Images/enviar.png);
+    border: 0;
+    width: 83px;
+    height: 28px;
+    cursor: pointer;
+    float: left;
+    margin: 1px 1px 1px 1px;
+}
+
+.btnFilaChamados {
+    background-color: transparent;
+    border: 0;
+    width: 169px;
+    height: 14px;
+    margin: 60px 0 0 10px;
+    cursor: pointer;
+}
+
+.btnMeusChamados {
+    background-color: transparent;
+    border: 0;
+    width: 169px;
+    height: 14px;
+    margin: 35px 0 0 10px;
+    cursor: pointer;
+}
+
+.btnNovoChamado {
+    background-color: transparent;
+    border: 0;
+    width: 169px;
+    height: 17px;
+    margin: 35px 0 0 10px;
+    cursor: pointer;
+}
+
+.btnRelatorios {
+    background-color: transparent;
+    border: 0;
+    width: 169px;
+    height: 18px;
+    margin: 25px 0 0 10px;
+    cursor: pointer;
+}
+
+.btnBuscar {
+    background-image: url(../../Style/Images/buscar.png);
+    background-color: transparent;
+    border: 0;
+    width: 28px;
+    height: 20px;
+    margin: 5px 0 0 2px;
+    cursor: pointer;
+}
+
+.senhaconfsenha {
+    width: 216px;
+}
+
+.senhaconfsenha {
+    width: 216px;
+}
+
+.lbllink {
+    margin: 1px 1px 1px 30px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.lbllinkStatus {
+    margin: 1px 1px 1px 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.lbllink2 {
+    margin: 1px 1px 1px 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.imgUsuarioLogado {
+    margin: 6px 2px 2px 2px;
+    width: 50px;
+    height: 40px;
+    border: 0;
+    float: left;
+}
+
+.ChartControlStyle {
+    background-color: transparent;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+}
+
+.btnChamadosAbertos {
+    background-image: url(../../Style/Images/chamados-pendentes.png);
+    width: 395px;
+    height: 59px;
+    border: 0px;
+}
+
+.btnChamadosFinalizados {
+    background-image: url(../../Style/Images/chamadosfinalizados.png);
+    width: 395px;
+    height: 59px;
+    border: 0px;
+    margin-top: 25px;
+}
+
+.btnTotalChamados {
+    background-image: url(../../Style/Images/totaldechamados.png);
+    width: 395px;
+    height: 59px;
+    border: 0px;
+    margin-top: 25px;
+}
+
+.field-validation-error {
+    width: 110px;
+    text-align: left;
+    font-size: 11px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: red;
+}
+
+.error {
+    background-image: url(../../Style/Images/erro-404.png);
+    width: 700px;
+    height: 350px;
+    border: 0;
+    margin: 1px 1px 1px 320px;
+}

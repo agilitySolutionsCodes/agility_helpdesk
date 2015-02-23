@@ -1,0 +1,4 @@
+C:\Projetos\agility_helpdesk\agility_helpdesk_fontes\Models\bin\Release\Models.dll
+C:\Projetos\agility_helpdesk\agility_helpdesk_fontes\Models\bin\Release\Models.pdb
+C:\Projetos\agility_helpdesk\agility_helpdesk_fontes\Models\obj\Release\Models.dll
+C:\Projetos\agility_helpdesk\agility_helpdesk_fontes\Models\obj\Release\Models.pdb

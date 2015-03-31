@@ -17,7 +17,7 @@
                         <td width="110" class="txt_form">LOGIN</td>
                         <td colspan="2">
                             <label for="textfield"></label>
-                            <input title="E-mail" runat="server" id="TxtUsuario" maxlength="100" type="email" required="required" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" />
+                            <input title="E-mail" runat="server" id="TxtUsuario" maxlength="100" type="email" required="" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" />
                             <br />
                             <asp:RequiredFieldValidator ID="ValidadorEmail" runat="server" ControlToValidate="TxtUsuario"
                                 CssClass="field-validation-error" ErrorMessage="*Preenchimento do campo E-mail é obrigatório." ValidationGroup="ValidacaoCadastro" />
@@ -26,7 +26,7 @@
                     <tr>
                         <td class="txt_form">SENHA</td>
                         <td colspan="2">
-                            <input title="Senha" name="TxtSenha" runat="server" id="TxtSenha" maxlength="20" type="password" />
+                            <input title="Senha" name="TxtSenha" runat="server" required="" id="TxtSenha" maxlength="20" type="password" />
                             <br />
                             <asp:RequiredFieldValidator ID="ValidadorSenha" runat="server" ControlToValidate="TxtSenha" CssClass="field-validation-error"
                                 ErrorMessage="*Preenchimento do campo senha é obrigatório." ValidationGroup="ValidacaoCadastro" />

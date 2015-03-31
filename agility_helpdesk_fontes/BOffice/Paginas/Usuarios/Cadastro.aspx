@@ -38,11 +38,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <input name="TxtNome" type="text" class="nome" id="TxtNome" maxlength="80" runat="server" />
+                            <input name="TxtNome" type="text" class="nome" id="TxtNome" required="" maxlength="80" runat="server" />
                             <asp:RequiredFieldValidator ID="ValidatorNome" ControlToValidate="TxtNome" ValidationGroup="ValidacaoCadastro" runat="server" CssClass="field-validation-error" ErrorMessage="*Informe o nome." />
                         </td>
                         <td colspan="3">
-                            <input name="TxtEmail" title="E-mail" type="text" class="email" id="TxtEmail" maxlength="100" required="required" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" runat="server" />
+                            <input name="TxtEmail" title="E-mail" type="text" class="email" id="TxtEmail" maxlength="100" required="" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" runat="server" />
                             <asp:RequiredFieldValidator ID="ValidatorEmail" ControlToValidate="TxtEmail" ValidationGroup="ValidacaoCadastro" runat="server" CssClass="field-validation-error" ErrorMessage="*Informe o e-mail." />
                         </td>
                     </tr>
@@ -65,7 +65,7 @@
                                 ControlToValidate="DrpCentroCusto" CssClass="field-validation-error" ErrorMessage=" *Selecione o centro de custo" />
                         </td>
                         <td>
-                            <input name="TxtCargo" type="text" class="cargo" id="TxtCargo" maxlength="70" runat="server" />
+                            <input name="TxtCargo" type="text" class="cargo" id="TxtCargo" required="" maxlength="70" runat="server" />
                             <br />
                             <asp:RequiredFieldValidator ID="ValidatorCargo" ControlToValidate="TxtCargo" ValidationGroup="ValidacaoCadastro"
                                 runat="server" CssClass="field-validation-error" ErrorMessage="*Informe o cargo." />
@@ -85,7 +85,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input name="TxtTelefone" type="text" class="telefone" id="TxtTelefone" maxlength="12" runat="server" />
+                            <input name="TxtTelefone" type="number" class="telefone" id="TxtTelefone" required="" maxlength="10" runat="server" />
                         </td>
                         <td>
                             <input name="TxtRamal" type="text" class="ramal" id="TxtRamal" maxlength="5" runat="server" />
@@ -106,13 +106,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <input name="TxtSenha" type="password" class="senhaconfsenha" id="TxtSenha" maxlength="40" runat="server" />
+                            <input name="TxtSenha" type="password" class="senhaconfsenha" required="" id="TxtSenha" maxlength="40" runat="server" />
                             <br />
                             <asp:RequiredFieldValidator ID="ValidatorSenha" ControlToValidate="TxtSenha" ValidationGroup="ValidacaoCadastro"
                                 runat="server" CssClass="field-validation-error" ErrorMessage="*Informe uma senha." />
                         </td>
                         <td>
-                            <input name="TxtConfirmacaoSenha" type="password" class="senhaconfsenha" id="TxtConfirmacaoSenha" maxlength="40" runat="server" />
+                            <input name="TxtConfirmacaoSenha" type="password" class="senhaconfsenha" required="" id="TxtConfirmacaoSenha" maxlength="40" runat="server" />
                             <br />
                             <asp:RequiredFieldValidator ID="ValidatorConfSenha" ControlToValidate="TxtConfirmacaoSenha" ValidationGroup="ValidacaoCadastro"
                                 runat="server" CssClass="field-validation-error" ErrorMessage="*Confirme a senha." />

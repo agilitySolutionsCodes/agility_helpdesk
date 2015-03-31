@@ -13,8 +13,10 @@ using BLL;
 
 namespace BOffice.Empresas
 {
+    #region Empresas
     public partial class Cadastro : System.Web.UI.Page
     {
+        #region Eventos
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -50,12 +52,6 @@ namespace BOffice.Empresas
                 }
             }
         }
-
-        #region Objetos
-
-        #endregion
-
-        #region Eventos
 
         protected void BtnCadastrar_ServerClick(object sender, EventArgs e)
         {
@@ -134,7 +130,6 @@ namespace BOffice.Empresas
                 DrpEmpresaMatriz.Items[0].Value = "";
             }
         }
-
         #endregion
 
         #region Métodos
@@ -346,4 +341,5 @@ namespace BOffice.Empresas
 
         #endregion
     }
+    #endregion 
 }

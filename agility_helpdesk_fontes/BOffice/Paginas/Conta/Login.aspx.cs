@@ -14,8 +14,10 @@ using BLL;
 
 namespace BOffice.Conta
 {
+    #region Login
     public partial class Login : System.Web.UI.Page
     {
+        #region Eventos
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -26,20 +28,9 @@ namespace BOffice.Conta
                 }
             }
         }
-
-        #region Objetos
-        TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
-        MD5CryptoServiceProvider md5Crypto = new MD5CryptoServiceProvider();
-
-        //Chave para criptografia
-        String Chave = "AgilityWD";
-        #endregion
-
-        #region Eventos
-
+        
         protected void BtnLogar_ServerClick(object sender, EventArgs e)
         {
-            // Lógica de botão aqui
             Usuario usuario = new Usuario();
             usuario.Email = TxtUsuario.Value;
             usuario.Senha = TxtSenha.Value;
@@ -113,4 +104,5 @@ namespace BOffice.Conta
 
         #endregion
     }
+    #endregion 
 }

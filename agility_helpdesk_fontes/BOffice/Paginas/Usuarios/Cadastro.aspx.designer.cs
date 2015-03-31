@@ -91,7 +91,7 @@ namespace BOffice.Usuarios {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText TxtTelefone;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl TxtTelefone;
         
         /// <summary>
         /// TxtRamal control.

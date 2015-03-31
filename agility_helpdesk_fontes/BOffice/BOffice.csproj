@@ -129,6 +129,13 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="Js\Categoria.js" />
+    <Content Include="Js\CentroCusto.js" />
+    <Content Include="Js\Chamados.js" />
+    <Content Include="Js\Classificacao.js" />
+    <Content Include="Js\Contato.js" />
+    <Content Include="Js\Empresa.js" />
+    <Content Include="Js\Usuario.js" />
     <Content Include="Paginas\Categorias\Cadastro.aspx" />
     <Content Include="Paginas\Categorias\Manutencao.aspx" />
     <Content Include="Paginas\CentroCusto\Cadastro.aspx" />

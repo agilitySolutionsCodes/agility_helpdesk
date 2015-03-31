@@ -13,8 +13,10 @@ using AgilityHelpDesk.Util;
 
 namespace BOffice.Classificacoes
 {
+    #region Classificacoes
     public partial class Cadastro : System.Web.UI.Page
     {
+        #region Eventos
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -47,12 +49,6 @@ namespace BOffice.Classificacoes
                 }
             }
         }
-
-        #region Objetos
-
-        #endregion
-
-        #region Eventos
 
         protected void BtnCadastrar_ServerClick(object sender, EventArgs e)
         {
@@ -112,7 +108,6 @@ namespace BOffice.Classificacoes
         {
             LimpaCampos();
         }
-
         #endregion
 
         #region Métodos
@@ -211,4 +206,5 @@ namespace BOffice.Classificacoes
 
         #endregion
     }
+    #endregion
 }

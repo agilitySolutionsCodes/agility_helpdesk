@@ -14,8 +14,10 @@ using BLL;
 
 namespace BOffice.Usuarios
 {
+    #region Usuarios
     public partial class Cadastro : System.Web.UI.Page
     {
+        #region Eventos
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -57,12 +59,6 @@ namespace BOffice.Usuarios
 
             }
         }
-
-        #region Objetos
-
-        #endregion
-
-        #region Eventos
 
         protected void BtnCadastrar_ServerClick(object sender, EventArgs e)
         {
@@ -142,7 +138,6 @@ namespace BOffice.Usuarios
             //Chama método para limpar os campos do formulário
             LimpaCampos();
         }
-
         #endregion
 
         #region Métodos
@@ -336,4 +331,5 @@ namespace BOffice.Usuarios
 
         #endregion
     }
+    #endregion 
 }

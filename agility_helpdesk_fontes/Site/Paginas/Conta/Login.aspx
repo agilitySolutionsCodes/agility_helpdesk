@@ -13,7 +13,7 @@
                 <div id="txt_login">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, nostrud quis
                     <br />
-                    quis nostrud exercitation laboris nisi ut aliquip ex ea commodo consequat ipsum . 
+                    quis nostrud exercitation laboris nisi ut aliquip ex ea commodo consequat ipsum. 
                 </div>
             </div>
             <div id="login_divisoria"></div>
@@ -41,7 +41,7 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td>
-                            <button runat="server" id="BtnLogar" class="btnLogar" onserverclick="BtnLogar_ServerClick" validationgroup="ValidacaoCadastro" />
+                            <button type="button" runat="server" id="BtnLogar" class="btnLogar" onserverclick="BtnLogar_ServerClick" validationgroup="ValidacaoCadastro" />
                         </td>
                     </tr>
                 </table>

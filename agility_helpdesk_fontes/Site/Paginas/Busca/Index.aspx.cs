@@ -88,7 +88,7 @@ namespace Site.Paginas.Busca
                         dt.Rows[i]["Prioridade"] = "Média";
                     }
 
-                    if (dt.Rows[i]["Prioridade"].ToString() == "2 ")
+                    if (dt.Rows[i]["Prioridade"].ToString() == "2 ")    
                     {
                         dt.Rows[i]["Prioridade"] = "Baixa";
                     }

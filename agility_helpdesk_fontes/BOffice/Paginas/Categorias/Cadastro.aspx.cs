@@ -13,8 +13,10 @@ using AgilityHelpDesk.Util;
 
 namespace BOffice.Categorias
 {
+    #region Categorias
     public partial class Cadastro : System.Web.UI.Page
     {
+        #region Eventos
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -47,11 +49,6 @@ namespace BOffice.Categorias
                 }
             }
         }
-
-        #region Objetos
-        #endregion
-
-        #region Eventos
 
         protected void BtnCadastrar_ServerClick(object sender, EventArgs e)
         {
@@ -90,7 +87,7 @@ namespace BOffice.Categorias
                     Email email = new Email();
                     //Popula HTML e-mail
                     htmlEmail = PopulaHtmlCategoria(Server.MapPath("~/Templates/EmailNovaCategoria.html"), Session["NomeUsuario"].ToString(), categoria.Nome, "", DateTime.Now);
-                   // Envia E-mail
+                    // Envia E-mail
                     email.SendEmail("yule.souza@outlook.com", "Novo Cadastro Categoria", htmlEmail, Session["NomeUsuario"].ToString(), "", DateTime.Now);
                     //Exibe mensagem de cadastro realizado com sucesso
                     ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Categoria cadastrada com sucesso.');", true);
@@ -105,11 +102,9 @@ namespace BOffice.Categorias
         {
             LimpaCampos();
         }
-
         #endregion
 
         #region Métodos
-
         protected Categoria Preencher(Categoria categoria)
         {
             if (categoria.IdCategoria == 0)
@@ -127,7 +122,7 @@ namespace BOffice.Categorias
                 categoria.Descricao = TxtDescricao.Value;
             }
 
-            if (DrpAtivo.SelectedValue == "Sim" )
+            if (DrpAtivo.SelectedValue == "Sim")
             {
                 categoria.Ativo = true;
             }
@@ -171,7 +166,7 @@ namespace BOffice.Categorias
 
             if (ativo == true)
             {
-                DrpAtivo.SelectedValue = "Sim";   
+                DrpAtivo.SelectedValue = "Sim";
             }
 
             else
@@ -201,7 +196,7 @@ namespace BOffice.Categorias
             TxtDescricao.Value = string.Empty;
             DrpAtivo.SelectedValue = "";
         }
-
         #endregion
     }
+    #endregion 
 }

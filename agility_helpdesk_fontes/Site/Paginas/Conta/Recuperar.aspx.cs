@@ -28,7 +28,6 @@ namespace Site.Paginas.Conta
         #endregion
 
         #region Eventos
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -49,7 +48,6 @@ namespace Site.Paginas.Conta
             {
                 UsuarioBLL usuarioBLL = new UsuarioBLL();
                 usuario = usuarioBLL.GetUsuarioPorEmail(usuario.Email);
-
                 if (usuario.IdUsuario == 0 && usuario.Email == string.Empty)
                 {
                     //ScriptManager.RegisterClientScriptBlock(BtnRecuperar, BtnRecuperar.GetType(), "msgAlerta", "alert('O e-mail informado não foi localizado no sistema.');", true);
@@ -62,18 +60,14 @@ namespace Site.Paginas.Conta
                 {
                     //Envia e-mail com dados do cadastro realizado
                     EmailSite email = new EmailSite();
-
                     //Popula HTML e-mail
                     string htmlEmail = PopulaHtml(Server.MapPath("~/Templates/RecuperacaoSenha.html"), usuario.Nome, "", DateTime.Now);
-
                     // Envia E-mail
                     email.SendEmail("yule.souza@outlook.com", "Nova Senha Sistema Help-Desk", htmlEmail, Server.MapPath("~/Templates/EmailNovaCategoria.html"),
                                     usuario.Nome, usuario.Senha, DateTime.Now);
-
-
-
                     //Método de envio de e-mail aqui
                     ScriptManager.RegisterClientScriptBlock(BtnRecuperar, BtnRecuperar.GetType(), "msgAlerta", "alert('Uma nova senha foi enviada para seu e-mail.');", true);
+                    LimpaCampos();
                 }
             }
         }
@@ -81,6 +75,11 @@ namespace Site.Paginas.Conta
         #endregion
 
         #region Métodos
+
+        public void LimpaCampos()
+        {
+            TxtUsuario.Value = string.Empty;
+        }
 
         protected String CriptografarSenha(string senha)
         {
@@ -90,7 +89,6 @@ namespace Site.Paginas.Conta
             ASCIIEncoding MyASCIIEncoding = new ASCIIEncoding();
             var buff = ASCIIEncoding.ASCII.GetBytes(senha);
             senha = Convert.ToBase64String(desdencrypt.TransformFinalBlock(buff, 0, buff.Length));
-
             return senha;
         }
 
@@ -99,7 +97,6 @@ namespace Site.Paginas.Conta
             Boolean varValidado = true;            
             string pattern = TxtUsuario.Attributes["pattern"].ToString();
             Regex regex = new Regex(pattern);
-
             if (!regex.IsMatch(TxtUsuario.Value))
             {
                 varValidado = false;
@@ -119,7 +116,6 @@ namespace Site.Paginas.Conta
             string corpoEmail = "";
             StreamReader streamReader = new StreamReader(caminhoHTML);
             corpoEmail = streamReader.ReadToEnd();
-
             //Preenche campos do HTML com os dados do cadastro realizado
             corpoEmail = corpoEmail.Replace("{NomeUsuario}", nomeUsuario);
             corpoEmail = corpoEmail.Replace("{NovaSenha}", novaSenha);

@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Atualizar_Empresa]    Script Date: 09/08/2014 17:10:40 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Atualizar_Empresa]    Script Date: 04/01/2015 14:19:52 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,7 @@ GO
 -- #001#  
 -- =========================================================================      
 
-ALTER PROCEDURE [dbo].[STP_Atualizar_Empresa]      
+CREATE PROCEDURE [dbo].[STP_Atualizar_Empresa]      
 
 (     
  @P_IdEmpresa INTEGER,

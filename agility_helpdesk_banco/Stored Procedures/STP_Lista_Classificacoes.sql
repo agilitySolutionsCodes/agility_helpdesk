@@ -1,12 +1,13 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Lista_Classificacoes]    Script Date: 09/08/2014 17:18:56 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Lista_Classificacoes]    Script Date: 04/01/2015 14:30:09 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 -- ===================================================================================       
@@ -16,7 +17,7 @@ GO
 -- Número			  Data		 Usuário      Descrição
 -- #001#			29/10/2013	Yule Souza	 Primeira Versão
 -- ===================================================================================      
-ALTER PROCEDURE [dbo].[STP_Lista_Classificacoes]
+CREATE PROCEDURE [dbo].[STP_Lista_Classificacoes]
 (
 	@P_IdUsuario INT 
 )
@@ -26,7 +27,7 @@ BEGIN
 	SET NOCOUNT ON;
 
         SELECT DISTINCT
-		CL.IdClassificacao, CL.Nome, CL.Descricao, CL.Descricao, CL.Ativo
+		CL.IdClassificacao, CL.Nome, CL.Descricao, E.NomeFantasia, CL.Ativo
 		FROM Classificacao CL
 		JOIN Empresa E
 		ON CL.Empresa = E.IdEmpresa 
@@ -36,6 +37,7 @@ BEGIN
 		ORDER BY CL.IdClassificacao
 	
 END
+
 
 
 

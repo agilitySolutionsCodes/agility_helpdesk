@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Valida_Email]    Script Date: 09/08/2014 17:21:10 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Valida_Email]    Script Date: 04/01/2015 14:32:06 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,7 +17,7 @@ GO
 -- #001#  
 -- =========================================================================  
     
-ALTER PROCEDURE [dbo].[STP_Valida_Email]      
+CREATE PROCEDURE [dbo].[STP_Valida_Email]      
 
 (   
  @P_EMAIL VARCHAR(100),

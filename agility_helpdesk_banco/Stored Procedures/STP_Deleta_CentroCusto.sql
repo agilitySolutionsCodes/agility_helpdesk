@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Deleta_CentroCusto]    Script Date: 09/08/2014 17:12:59 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Deleta_CentroCusto]    Script Date: 04/01/2015 14:21:05 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,7 @@ GO
 -- #001#  
 -- =========================================================================    
 
-ALTER PROCEDURE [dbo].[STP_Deleta_CentroCusto]    
+CREATE PROCEDURE [dbo].[STP_Deleta_CentroCusto]    
 (     
  @P_IdCentroCusto INT
 )       

@@ -1,17 +1,12 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Atualizar_Usuario]    Script Date: 09/08/2014 17:11:17 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Atualizar_Usuario]    Script Date: 04/01/2015 14:20:05 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-
-
-
-
-
 
 
 -- =========================================================================      
@@ -22,13 +17,12 @@ GO
 -- #001#  
 -- =========================================================================      
 
-ALTER PROCEDURE [dbo].[STP_Atualizar_Usuario]      
+CREATE PROCEDURE [dbo].[STP_Atualizar_Usuario]      
 
 (     
  @P_IdUsuario INTEGER,
  @P_Nome VARCHAR(80) = NULL,
- @P_Email VARCHAR(100) = NULL,
- @P_Senha VARCHAR(40) = NULL,
+ @P_Email VARCHAR(100) = NULL, 
  @P_Departamento INT = NULL, 
  @P_Cargo VARCHAR(60) = NULL,
  @P_Telefone VARCHAR(12) = NULL,
@@ -50,7 +44,6 @@ SET NOCOUNT ON
 		SET 
 		Nome = @P_Nome,
 		Email = @P_Email,
-		Senha = @P_Senha,
 		Departamento = @P_Departamento,
 		Cargo = @P_Cargo,
 		Telefone = @P_Telefone,
@@ -66,6 +59,7 @@ SET NOCOUNT ON
 	END		
 END      
 SET NOCOUNT OFF 
+
 
 
 

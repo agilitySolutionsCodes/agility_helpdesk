@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Aceita_Termos_Uso]    Script Date: 09/08/2014 17:08:48 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Aceita_Termos_Uso]    Script Date: 04/01/2015 14:18:05 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,7 @@ GO
 -- #001#  
 -- =======================================================================================================  
     
-ALTER PROCEDURE [dbo].[STP_Aceita_Termos_Uso]      
+CREATE PROCEDURE [dbo].[STP_Aceita_Termos_Uso]      
 (   
  @P_IdUsuario INT,
  @P_Ativo BIT,

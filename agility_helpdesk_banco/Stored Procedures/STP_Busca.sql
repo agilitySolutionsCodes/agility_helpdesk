@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Busca]    Script Date: 09/08/2014 17:12:36 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Busca]    Script Date: 04/01/2015 14:20:42 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -20,7 +20,7 @@ GO
 -- #001#  
 -- =========================================================================  
 
-ALTER PROCEDURE [dbo].[STP_Busca]   
+CREATE PROCEDURE [dbo].[STP_Busca]   
 (
 	@P_PalavraChave VARCHAR(100)
 )

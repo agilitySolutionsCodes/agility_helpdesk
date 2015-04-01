@@ -85,7 +85,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input name="TxtTelefone" type="number" class="telefone" id="TxtTelefone" required="" maxlength="10" runat="server" />
+                            <input name="TxtTelefone" type="tel" class="telefone" id="TxtTelefone" required="" maxlength="10" runat="server" />
                         </td>
                         <td>
                             <input name="TxtRamal" type="text" class="ramal" id="TxtRamal" maxlength="5" runat="server" />

@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Incluir_CentroCusto]    Script Date: 09/08/2014 17:15:34 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Incluir_CentroCusto]    Script Date: 04/01/2015 14:27:06 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,7 @@ GO
 -- #001#  
 -- =========================================================================      
 
-ALTER PROCEDURE [dbo].[STP_Incluir_CentroCusto]      
+CREATE PROCEDURE [dbo].[STP_Incluir_CentroCusto]      
 
 (     
  @P_IdCentroCusto INTEGER = NULL,

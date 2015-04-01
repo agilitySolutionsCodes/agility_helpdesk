@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Lista_Numero_Chamados_Relatorio]    Script Date: 09/08/2014 17:20:12 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Lista_Numero_Chamados_Relatorio]    Script Date: 04/01/2015 14:31:12 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,7 @@ GO
 -- Número			  Data		 Usuário      Descrição
 -- #001#			29/10/2013	Yule Souza	 Primeira Versão
 -- ===================================================================================      
-ALTER PROCEDURE [dbo].[STP_Lista_Numero_Chamados_Relatorio]
+CREATE PROCEDURE [dbo].[STP_Lista_Numero_Chamados_Relatorio]
 (
    @P_IdEmpresa INT,
    @P_StatusFiltro CHAR(2) = NULL

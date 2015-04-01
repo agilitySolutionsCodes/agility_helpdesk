@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Finalizar_Chamado]    Script Date: 09/08/2014 17:15:08 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Finalizar_Chamado]    Script Date: 04/01/2015 14:23:16 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -19,7 +19,7 @@ GO
 -- #001#  
 -- =========================================================================      
 
-ALTER PROCEDURE [dbo].[STP_Finalizar_Chamado]      
+CREATE PROCEDURE [dbo].[STP_Finalizar_Chamado]      
 
 (     
  @P_IdChamado INT,

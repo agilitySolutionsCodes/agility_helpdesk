@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Atualizar_Classificacao]    Script Date: 09/08/2014 17:10:05 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Atualizar_Classificacao]    Script Date: 04/01/2015 14:19:40 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,7 +17,7 @@ GO
 -- #001#  
 -- =========================================================================      
 
-ALTER PROCEDURE [dbo].[STP_Atualizar_Classificacao]      
+CREATE PROCEDURE [dbo].[STP_Atualizar_Classificacao]      
 
 (     
  @P_IdClassificacao INTEGER,

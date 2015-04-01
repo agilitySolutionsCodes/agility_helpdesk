@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Incluir_Chamado]    Script Date: 09/08/2014 17:15:52 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Incluir_Chamado]    Script Date: 04/01/2015 14:27:21 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -22,7 +22,7 @@ GO
 -- #001#  
 -- =========================================================================      
 
-ALTER PROCEDURE [dbo].[STP_Incluir_Chamado]      
+CREATE PROCEDURE [dbo].[STP_Incluir_Chamado]      
 
 (     
  @P_IdChamado INTEGER = NULL,

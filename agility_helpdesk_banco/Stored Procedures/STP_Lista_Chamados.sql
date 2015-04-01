@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Lista_Chamados]    Script Date: 09/08/2014 17:18:34 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Lista_Chamados]    Script Date: 04/01/2015 14:29:47 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,7 +17,7 @@ GO
 -- Número			Data	     Usuário      Descrição
 -- #001#			29/10/2013	Yule Souza	 Primeira Versão
 -- ===================================================================================      
-ALTER PROCEDURE [dbo].[STP_Lista_Chamados]
+CREATE PROCEDURE [dbo].[STP_Lista_Chamados]
 
 (
 	@P_IdUsuario INT 

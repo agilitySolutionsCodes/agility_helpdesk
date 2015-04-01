@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Lista_Classificacoes_Por_Id]    Script Date: 09/08/2014 17:19:12 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Lista_Classificacoes_Por_Id]    Script Date: 04/01/2015 14:30:24 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -16,7 +16,7 @@ GO
 -- Número			  Data		 Usuário      Descrição
 -- #001#			29/10/2013	Yule Souza	 Primeira Versão
 -- ===================================================================================      
-ALTER PROCEDURE [dbo].[STP_Lista_Classificacoes_Por_Id]
+CREATE PROCEDURE [dbo].[STP_Lista_Classificacoes_Por_Id]
 
 (
 	@P_IdClassificacao INT

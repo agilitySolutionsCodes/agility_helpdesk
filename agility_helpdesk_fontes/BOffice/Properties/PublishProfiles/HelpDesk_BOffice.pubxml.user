@@ -19,7 +19,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:29</publishTime>
     </File>
     <File Include="bin/BOffice.dll">
-      <publishTime>08/12/2014 14:07:09</publishTime>
+      <publishTime>04/01/2015 14:41:55</publishTime>
     </File>
     <File Include="bin/DotNetOpenAuth.AspNet.dll">
       <publishTime>10/17/2013 10:27:35</publishTime>
@@ -61,7 +61,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:31</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>08/12/2014 14:07:08</publishTime>
+      <publishTime>04/01/2015 14:41:55</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>10/17/2013 10:27:28</publishTime>
@@ -84,11 +84,32 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>10/17/2013 10:43:14</publishTime>
     </File>
+    <File Include="Js/Categoria.js">
+      <publishTime>03/31/2015 16:11:02</publishTime>
+    </File>
+    <File Include="Js/CentroCusto.js">
+      <publishTime>03/31/2015 16:11:22</publishTime>
+    </File>
+    <File Include="Js/Chamados.js">
+      <publishTime>03/31/2015 16:11:32</publishTime>
+    </File>
+    <File Include="Js/Classificacao.js">
+      <publishTime>03/31/2015 16:11:43</publishTime>
+    </File>
+    <File Include="Js/Contato.js">
+      <publishTime>03/31/2015 16:12:00</publishTime>
+    </File>
+    <File Include="Js/Empresa.js">
+      <publishTime>03/31/2015 16:12:07</publishTime>
+    </File>
+    <File Include="Js/Usuario.js">
+      <publishTime>03/31/2015 16:12:26</publishTime>
+    </File>
     <File Include="packages.config">
       <publishTime>10/17/2013 10:43:21</publishTime>
     </File>
     <File Include="Paginas/Categorias/Cadastro.aspx">
-      <publishTime>05/30/2014 15:24:25</publishTime>
+      <publishTime>02/23/2015 10:19:19</publishTime>
     </File>
     <File Include="Paginas/Categorias/Manutencao.aspx">
       <publishTime>06/09/2014 10:56:49</publishTime>
@@ -106,7 +127,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/09/2014 10:34:29</publishTime>
     </File>
     <File Include="Paginas/Conta/Login.aspx">
-      <publishTime>07/28/2014 11:17:21</publishTime>
+      <publishTime>04/01/2015 14:15:39</publishTime>
     </File>
     <File Include="Paginas/Empresas/Cadastro.aspx">
       <publishTime>07/22/2014 15:12:22</publishTime>
@@ -145,7 +166,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/15/2014 16:10:39</publishTime>
     </File>
     <File Include="Paginas/Usuarios/Cadastro.aspx">
-      <publishTime>08/05/2014 09:38:43</publishTime>
+      <publishTime>04/01/2015 14:17:25</publishTime>
     </File>
     <File Include="Paginas/Usuarios/Manutencao.aspx">
       <publishTime>06/09/2014 10:37:34</publishTime>
@@ -592,22 +613,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:43:16</publishTime>
     </File>
     <File Include="Templates/EmailNovaCategoria.html">
-      <publishTime>05/20/2014 15:05:29</publishTime>
+      <publishTime>08/13/2014 10:42:58</publishTime>
     </File>
     <File Include="Templates/EmailNovaClassificacao.html">
-      <publishTime>05/20/2014 15:07:07</publishTime>
+      <publishTime>08/13/2014 10:43:10</publishTime>
     </File>
     <File Include="Templates/EmailNovaEmpresa.html">
-      <publishTime>05/20/2014 15:07:47</publishTime>
+      <publishTime>08/13/2014 10:43:30</publishTime>
     </File>
     <File Include="Templates/EmailNovaUsuario.html">
-      <publishTime>05/20/2014 15:08:19</publishTime>
+      <publishTime>08/13/2014 10:43:49</publishTime>
     </File>
     <File Include="ViewSwitcher.ascx">
       <publishTime>10/17/2013 10:43:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/12/2014 14:07:44</publishTime>
+      <publishTime>04/01/2015 14:42:15</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Valida_CNPJ]    Script Date: 09/08/2014 17:20:58 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Valida_CNPJ]    Script Date: 04/01/2015 14:31:54 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,7 @@ GO
 -- #001#  
 -- =========================================================================  
     
-ALTER PROCEDURE [dbo].[STP_Valida_CNPJ]      
+CREATE PROCEDURE [dbo].[STP_Valida_CNPJ]      
 
 (   
  @P_CNPJ VARCHAR(16),
@@ -32,7 +32,7 @@ SET NOCOUNT ON
 	IF(SELECT COUNT(*) FROM Empresa WHERE CNPJ = @P_CNPJ) = 0 BEGIN
 	    
 		SELECT  
-			   @CNPJ = E.CNPJ
+			   @CNPJ = e.CNPJ
 			   			   
 		FROM Empresa E (NOLOCK) 
 		WHERE E.CNPJ = @P_CNPJ 

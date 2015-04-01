@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Deleta_Classificacao]    Script Date: 09/08/2014 17:14:12 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Deleta_Classificacao]    Script Date: 04/01/2015 14:22:18 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,7 @@ GO
 -- #001#  
 -- =========================================================================    
 
-ALTER PROCEDURE [dbo].[STP_Deleta_Classificacao]    
+CREATE PROCEDURE [dbo].[STP_Deleta_Classificacao]    
 (     
  @P_IdClassificacao INT
 )       

@@ -71,7 +71,7 @@ namespace BOffice.Usuarios
 
                 if (varValidado == true)
                 {
-                    varValidado = ValidaSenhas();    
+                    varValidado = ValidaSenhas();
                 }
 
                 //Metodo de Validação de dados
@@ -331,5 +331,5 @@ namespace BOffice.Usuarios
 
         #endregion
     }
-    #endregion 
+    #endregion
 }

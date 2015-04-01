@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Autenticar_Usuario]    Script Date: 09/08/2014 17:11:36 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Autenticar_Usuario]    Script Date: 04/01/2015 14:20:27 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,7 +17,7 @@ GO
 -- #001#  
 -- =========================================================================  
     
-ALTER PROCEDURE [dbo].[STP_Autenticar_Usuario]      
+CREATE PROCEDURE [dbo].[STP_Autenticar_Usuario]      
 (   
  @P_Email VARCHAR(100),
  @P_Senha VARCHAR(40),

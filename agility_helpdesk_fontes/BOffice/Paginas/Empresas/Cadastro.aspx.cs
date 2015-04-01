@@ -68,7 +68,7 @@ namespace BOffice.Empresas
                 empresa = new Empresa();
             }
 
-               empresa = Preencher(empresa);
+            empresa = Preencher(empresa);
 
             if (ValidaCampos(empresa) == true)
             {
@@ -80,6 +80,10 @@ namespace BOffice.Empresas
                     empresaBLL.AtualizaEmpresaPorId(empresa);
 
                     ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Empresa atualizada com sucesso.');", true);
+
+                    //Remove a session que contém o código da empresa 
+                    Session.Remove("IdEmpresaUpdate");
+                    LimpaCampos();
                 }
 
                 else
@@ -95,6 +99,8 @@ namespace BOffice.Empresas
 
                         //Exibe mensagem de cadastro realizado com sucesso
                         ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Empresa cadastrada com sucesso.');", true);
+                        //Limpa campos após cadastro ser realizado
+                        LimpaCampos();
                     }
 
                     else
@@ -103,9 +109,6 @@ namespace BOffice.Empresas
                         ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgError", "alert('Atenção este CNPJ ja esta cadastrado favor verificar.');", true);
                     }
                 }
-
-                //Limpa campos após cadastro ser realizado
-                LimpaCampos();
             }
         }
 
@@ -341,5 +344,5 @@ namespace BOffice.Empresas
 
         #endregion
     }
-    #endregion 
+    #endregion
 }

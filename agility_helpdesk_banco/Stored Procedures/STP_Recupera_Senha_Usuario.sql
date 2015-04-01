@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Recupera_Senha_Usuario]    Script Date: 09/08/2014 17:20:48 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Recupera_Senha_Usuario]    Script Date: 04/01/2015 14:31:45 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,7 @@ GO
 -- #001#  
 -- =============================================================================  
     
-ALTER PROCEDURE [dbo].[STP_Recupera_Senha_Usuario]      
+CREATE PROCEDURE [dbo].[STP_Recupera_Senha_Usuario]      
 (   
  @P_Email VARCHAR(100),
  @Ok BIT OUTPUT,

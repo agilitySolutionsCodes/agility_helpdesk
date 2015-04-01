@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Atualizar_CentroCusto]    Script Date: 09/08/2014 17:09:53 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Atualizar_CentroCusto]    Script Date: 04/01/2015 14:19:23 ******/
 SET ANSI_NULLS ON
 GO
 

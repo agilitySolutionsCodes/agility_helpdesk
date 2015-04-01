@@ -1,14 +1,12 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Incluir_Categoria]    Script Date: 09/08/2014 17:15:21 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Incluir_Categoria]    Script Date: 04/01/2015 14:23:04 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-
-
 
 
 -- =========================================================================      
@@ -19,7 +17,7 @@ GO
 -- #001#  
 -- =========================================================================      
 
-ALTER PROCEDURE [dbo].[STP_Incluir_Categoria]      
+CREATE PROCEDURE [dbo].[STP_Incluir_Categoria]      
 
 (     
  @P_IdCategoria INTEGER = NULL,

@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Deleta_Usuario]    Script Date: 09/08/2014 17:14:40 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Deleta_Usuario]    Script Date: 04/01/2015 14:22:43 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -19,7 +19,7 @@ GO
 -- #001#  
 -- =========================================================================    
 
-ALTER PROCEDURE [dbo].[STP_Deleta_Usuario]    
+CREATE PROCEDURE [dbo].[STP_Deleta_Usuario]    
 (     
  @P_IdUsuario INT
 )       

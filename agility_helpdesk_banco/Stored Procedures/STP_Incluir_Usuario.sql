@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Incluir_Usuario]    Script Date: 09/08/2014 17:17:19 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Incluir_Usuario]    Script Date: 04/01/2015 14:28:28 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,7 +17,7 @@ GO
 -- #001#  
 -- =========================================================================      
 
-ALTER PROCEDURE [dbo].[STP_Incluir_Usuario]      
+CREATE PROCEDURE [dbo].[STP_Incluir_Usuario]      
 
 (     
  @P_IdUsuario INTEGER = NULL,

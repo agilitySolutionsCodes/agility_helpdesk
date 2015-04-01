@@ -1,7 +1,7 @@
 USE [WebHelpDesk]
 GO
 
-/****** Object:  StoredProcedure [dbo].[STP_Atender_Chamado]    Script Date: 09/08/2014 17:09:25 ******/
+/****** Object:  StoredProcedure [dbo].[STP_Atender_Chamado]    Script Date: 04/01/2015 14:18:47 ******/
 SET ANSI_NULLS ON
 GO
 

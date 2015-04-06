@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Projetos\agility_helpdesk\agility_helpdesk_publicação\Gerenciador</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Codes\agility_helpdesk\agility_helpdesk_publicacao\Gerenciador</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -19,7 +19,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:29</publishTime>
     </File>
     <File Include="bin/BOffice.dll">
-      <publishTime>04/01/2015 14:41:55</publishTime>
+      <publishTime>04/06/2015 10:24:07</publishTime>
     </File>
     <File Include="bin/DotNetOpenAuth.AspNet.dll">
       <publishTime>10/17/2013 10:27:35</publishTime>
@@ -61,7 +61,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:31</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>04/01/2015 14:41:55</publishTime>
+      <publishTime>04/06/2015 10:24:07</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>10/17/2013 10:27:28</publishTime>
@@ -628,7 +628,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:43:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/01/2015 14:42:15</publishTime>
+      <publishTime>04/06/2015 10:24:10</publishTime>
     </File>
   </ItemGroup>
 </Project>

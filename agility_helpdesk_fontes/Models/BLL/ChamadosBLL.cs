@@ -112,6 +112,7 @@ namespace BLL
         public Chamado FinalizarChamado(int idUsuario, int idChamado)
         {
             Chamado chamado = new Chamado();
+            chamadoDAL = new ChamadosDAL();
             chamado.IdChamado = idChamado;
 
             if (chamado.IdChamado != 0)

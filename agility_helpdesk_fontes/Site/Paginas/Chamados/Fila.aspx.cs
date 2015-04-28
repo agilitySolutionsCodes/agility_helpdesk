@@ -13,6 +13,8 @@ namespace Site.Paginas.Chamados
 {
     public partial class Fila : System.Web.UI.Page
     {
+        #region Load
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -31,6 +33,8 @@ namespace Site.Paginas.Chamados
                 }
             }
         }
+        
+        #endregion
 
         #region Eventos
 

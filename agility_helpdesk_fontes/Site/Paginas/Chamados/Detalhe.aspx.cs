@@ -159,6 +159,9 @@ namespace Site.Paginas.Chamados
                     if (dtChamado.Rows[i]["StatusChamado"].ToString() == "F ")
                     {
                         LblStatus.Text = "Finalizado";
+                        BtnEncerrar.Visible = false;
+                        BtnFinalizar.Visible = false;
+                        BtnCancelar.Visible = false;
                     }
 
                     if (dtChamado.Rows[i]["StatusChamado"].ToString() == "FA" && Convert.ToInt32(dtChamado.Rows[i]["Solicitante"].ToString()) == idUsuario)
@@ -172,14 +175,6 @@ namespace Site.Paginas.Chamados
                         BtnEncerrar.Visible = true;
                         BtnCancelar.Visible = false;
                     }
-
-
-                    //else
-                    //{
-                    //    BtnEncerrar.Visible = false;
-                    //    BtnFinalizar.Visible = false;
-                    //    BtnCancelar.Visible = false;
-                    //}
                 }
 
                 //Validação para mudança de valores no grid referente a prioridade do chamado

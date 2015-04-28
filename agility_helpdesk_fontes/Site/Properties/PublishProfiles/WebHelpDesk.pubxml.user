@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Projetos\agility_helpdesk\agility_helpdesk_publicação\Sistema</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Codes\agility_helpdesk\agility_helpdesk_publicacao\Sistema</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Account/Login.aspx">
@@ -79,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:31</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>08/12/2014 14:40:13</publishTime>
+      <publishTime>04/24/2015 14:34:05</publishTime>
     </File>
     <File Include="bin/Site.dll">
-      <publishTime>08/12/2014 14:40:14</publishTime>
+      <publishTime>04/24/2015 14:34:06</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>10/17/2013 10:27:28</publishTime>
@@ -105,14 +105,35 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>10/17/2013 10:27:09</publishTime>
     </File>
+    <File Include="Js/Categoria.js">
+      <publishTime>03/31/2015 16:11:02</publishTime>
+    </File>
+    <File Include="Js/CentroCusto.js">
+      <publishTime>03/31/2015 16:11:22</publishTime>
+    </File>
+    <File Include="Js/Chamados.js">
+      <publishTime>03/31/2015 16:11:32</publishTime>
+    </File>
+    <File Include="Js/Classificacao.js">
+      <publishTime>03/31/2015 16:11:43</publishTime>
+    </File>
+    <File Include="Js/Contato.js">
+      <publishTime>03/31/2015 16:12:00</publishTime>
+    </File>
+    <File Include="Js/Empresa.js">
+      <publishTime>03/31/2015 16:12:07</publishTime>
+    </File>
+    <File Include="Js/Usuario.js">
+      <publishTime>03/31/2015 16:12:26</publishTime>
+    </File>
     <File Include="packages.config">
       <publishTime>01/07/2014 11:06:18</publishTime>
     </File>
     <File Include="Paginas/Busca/Index.aspx">
-      <publishTime>06/09/2014 10:32:39</publishTime>
+      <publishTime>03/04/2015 13:45:11</publishTime>
     </File>
     <File Include="Paginas/Chamados/Detalhe.aspx">
-      <publishTime>06/30/2014 12:37:04</publishTime>
+      <publishTime>08/15/2014 10:03:21</publishTime>
     </File>
     <File Include="Paginas/Chamados/Fila.aspx">
       <publishTime>06/30/2014 11:24:41</publishTime>
@@ -124,10 +145,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/26/2014 15:13:32</publishTime>
     </File>
     <File Include="Paginas/Conta/Login.aspx">
-      <publishTime>07/28/2014 11:18:15</publishTime>
+      <publishTime>03/31/2015 14:19:48</publishTime>
     </File>
     <File Include="Paginas/Conta/Recuperar.aspx">
-      <publishTime>05/05/2014 10:43:09</publishTime>
+      <publishTime>03/31/2015 15:49:24</publishTime>
     </File>
     <File Include="Paginas/Error/404.aspx">
       <publishTime>07/17/2014 16:57:38</publishTime>
@@ -226,13 +247,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:27</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>06/09/2014 16:38:45</publishTime>
+      <publishTime>03/31/2015 14:17:52</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>10/17/2013 10:27:41</publishTime>
     </File>
     <File Include="Style/Css/Site.css">
-      <publishTime>07/17/2014 16:57:05</publishTime>
+      <publishTime>08/13/2014 15:04:33</publishTime>
     </File>
     <File Include="Style/Images/baloon.png">
       <publishTime>12/05/2013 14:28:04</publishTime>
@@ -293,6 +314,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Style/Images/divisoria-login.png">
       <publishTime>12/04/2013 19:36:12</publishTime>
+    </File>
+    <File Include="Style/Images/encerrar-chamado-hover.png">
+      <publishTime>08/13/2014 14:34:48</publishTime>
+    </File>
+    <File Include="Style/Images/encerrar-chamado.png">
+      <publishTime>08/13/2014 14:34:48</publishTime>
     </File>
     <File Include="Style/Images/entrar.png">
       <publishTime>11/22/2013 14:22:16</publishTime>
@@ -568,7 +595,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/20/2014 12:25:13</publishTime>
     </File>
     <File Include="Templates/RecuperacaoSenha.html">
-      <publishTime>08/12/2014 14:15:58</publishTime>
+      <publishTime>02/23/2015 10:17:34</publishTime>
     </File>
     <File Include="Uploads/Yule.jpg">
       <publishTime>02/27/2013 17:43:43</publishTime>
@@ -577,7 +604,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/12/2014 14:40:31</publishTime>
+      <publishTime>04/24/2015 14:37:19</publishTime>
     </File>
   </ItemGroup>
 </Project>

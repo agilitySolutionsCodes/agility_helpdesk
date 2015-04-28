@@ -23,13 +23,13 @@
                 <td>
                     <asp:DropDownList ID="DrpCategoria" CssClass="com_class_pri" DataTextField="Nome" DataValueField="IdCategoria" runat="server" />
                     <br />
-                    <asp:RequiredFieldValidator ID="ValidadorCategoria" InitialValue="" ValidationGroup="ValidacaoCadastro" runat="server"
+                    <asp:RequiredFieldValidator ID="ValidadorCategoria" InitialValue="" ValidationGroup="ValidacaoChamado" runat="server"
                         ControlToValidate="DrpCategoria" CssClass="field-validation-error" ErrorMessage=" *Selecione uma categoria" />
                 </td>
                 <td>
                     <asp:DropDownList ID="DrpClassificacao" CssClass="com_class_pri" DataTextField="Nome" DataValueField="IdClassificacao" runat="server" />
                     <br />
-                    <asp:RequiredFieldValidator ID="ValidadorClassificacao" InitialValue="" ValidationGroup="ValidacaoCadastro" runat="server"
+                    <asp:RequiredFieldValidator ID="ValidadorClassificacao" InitialValue="" ValidationGroup="ValidacaoChamado" runat="server"
                         ControlToValidate="DrpClassificacao" CssClass="field-validation-error" ErrorMessage=" *Selecione uma classificação" />
                 </td>
                 <td>
@@ -40,7 +40,7 @@
                         <asp:ListItem Text="Alta" Value="A"></asp:ListItem>
                     </asp:DropDownList>
                     <br />
-                    <asp:RequiredFieldValidator ID="ValidadorPrioridade" InitialValue="" ValidationGroup="ValidacaoCadastro" runat="server"
+                    <asp:RequiredFieldValidator ID="ValidadorPrioridade" InitialValue="" ValidationGroup="ValidacaoChamado" runat="server"
                         ControlToValidate="DrpPrioridade" CssClass="field-validation-error" ErrorMessage=" *Selecione a prioridade do chamado" />
                 </td>
             </tr>
@@ -59,7 +59,7 @@
                     <input name="TxtAssunto" type="text" class="assuntoNew" id="TxtAssunto" runat="server" />
                     <br />
                     <asp:RequiredFieldValidator ID="ValidadorAssunto" runat="server" ControlToValidate="TxtAssunto" CssClass="field-validation-error"
-                        ValidationGroup="ValidacaoCadastro" ErrorMessage="*Preenchimento do campo assunto é obrigatório." />
+                        ValidationGroup="ValidacaoChamado" ErrorMessage="*Preenchimento do campo assunto é obrigatório." />
                 </td>
                 <td>
                     <asp:FileUpload ID="UploadImagem" runat="server" Style="border: 0; margin-bottom: 30px; width: 200px;" CssClass="uploadGeneric" />
@@ -67,7 +67,7 @@
                 <td>
                     <asp:DropDownList ID="DrpAtendente" CssClass="com_class_pri" DataTextField="Nome" DataValueField="IdUsuario" runat="server" />
                     <br />
-                    <asp:RequiredFieldValidator ID="ValidadorAtendente" InitialValue="" ValidationGroup="ValidacaoCadastro" runat="server"
+                    <asp:RequiredFieldValidator ID="ValidadorAtendente" InitialValue="" ValidationGroup="ValidacaoChamado" runat="server"
                         ControlToValidate="DrpAtendente" CssClass="field-validation-error" ErrorMessage=" *Selecione um atendente" />
                 </td>
             </tr>
@@ -83,7 +83,7 @@
                 <td colspan="3">
                     <textarea name="TxtDescricao" cols="45" rows="5" class="comentarios" id="TxtDescricao" runat="server"></textarea>
                     <br />
-                    <asp:RequiredFieldValidator ID="ValidadorDescricao" ValidationGroup="ValidacaoCadastro" runat="server" ControlToValidate="TxtDescricao"
+                    <asp:RequiredFieldValidator ID="ValidadorDescricao" ValidationGroup="ValidacaoChamado" runat="server" ControlToValidate="TxtDescricao"
                         CssClass="field-validation-error" ErrorMessage="*Preenchimento do campo descrição é obrigatório." />
                 </td>
             </tr>
@@ -94,7 +94,7 @@
             </tr>
             <tr>
                 <td width="102">
-                    <button runat="server" id="BtnCadastrar" class="btnGravar" onserverclick="BtnCadastrar_ServerClick" validationgroup="ValidacaoCadastro" />
+                    <button runat="server" id="BtnCadastrar" class="btnGravar" onserverclick="BtnCadastrar_ServerClick" validationgroup="ValidacaoChamado" />
                 </td>
                 <td width="596">
                     <button runat="server" id="BtnLimpar" class="btnLimpar" onserverclick="BtnLimpar_ServerClick" />

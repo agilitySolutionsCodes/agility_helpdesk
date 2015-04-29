@@ -1,8 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NovoChamado.aspx.cs" Inherits="Site.Paginas.Chamados.NovoChamado" %>
 
-<asp:Content ID="ContentHead" ContentPlaceHolderID="HeadContent" runat="server">
-</asp:Content>
-
 <asp:Content ID="ContentMain" ContentPlaceHolderID="MainContent" runat="server">
     <div id="right_side1">
         <table width="710">

@@ -92,7 +92,7 @@ namespace BOffice
             routes.MapPageRoute("Termos-Uso", "Termos-Uso", "~/Paginas/Institucional/TermosUso.aspx");
 
             //Mapeamento de rota de Erro
-            routes.MapPageRoute("Error-404", "Error-404", "~/Paginas/Error/404.aspx");
+            routes.MapPageRoute("Error-404", "Error-404", "~/Paginas/Error/404.html");
         }
     }
 }

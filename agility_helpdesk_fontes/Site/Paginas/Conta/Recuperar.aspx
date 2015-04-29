@@ -1,8 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Recuperar.aspx.cs" Inherits="Site.Paginas.Conta.Recuperar" %>
 
-<asp:Content ID="ContentHead" ContentPlaceHolderID="HeadContent" runat="server">
-</asp:Content>
-
 <asp:Content ID="ContentMain" ContentPlaceHolderID="MainContent" runat="server">
     <div id="content">
         <div id="middle_content">

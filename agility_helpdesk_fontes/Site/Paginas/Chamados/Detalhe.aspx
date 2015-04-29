@@ -1,8 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Detalhe.aspx.cs" Inherits="Site.Paginas.Chamados.Detalhe" %>
 
-<asp:Content ID="ContentHead" ContentPlaceHolderID="HeadContent" runat="server">
-</asp:Content>
-
 <asp:Content ID="ContentMain" ContentPlaceHolderID="MainContent" runat="server">
     <div id="right_side2">
         <table width="710">

@@ -143,6 +143,7 @@
     <Content Include="Paginas\Classificacoes\Cadastro.aspx" />
     <Content Include="Paginas\Classificacoes\Manutencao.aspx" />
     <Content Include="Paginas\Error\404.aspx" />
+    <Content Include="Paginas\Error\404.html" />
     <Content Include="Paginas\Institucional\Ajuda.aspx" />
     <Content Include="Paginas\Institucional\Contato.aspx" />
     <Content Include="Paginas\Conta\Login.aspx" />

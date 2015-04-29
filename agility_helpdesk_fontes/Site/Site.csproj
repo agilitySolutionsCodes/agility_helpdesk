@@ -146,6 +146,7 @@
     <Content Include="Paginas\Conta\Login.aspx" />
     <Content Include="Paginas\Conta\Recuperar.aspx" />
     <Content Include="Paginas\Error\404.aspx" />
+    <Content Include="Paginas\Error\404.html" />
     <Content Include="Paginas\Institucional\Contato.aspx" />
     <Content Include="Paginas\Institucional\TermosUso.aspx" />
     <Content Include="Paginas\Relatorios\Index.aspx" />

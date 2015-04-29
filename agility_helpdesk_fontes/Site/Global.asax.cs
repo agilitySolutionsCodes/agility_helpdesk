@@ -82,7 +82,7 @@ namespace Site
             routes.MapPageRoute("Relatorios-Visualizar", "Relatorios-Visualizar", "~/Paginas/Relatorios/Index.aspx");
 
             //Mapeamento de rota de Erro
-            routes.MapPageRoute("Error-404", "Error-404", "~/Paginas/Error/404.aspx");
+            routes.MapPageRoute("Error-404", "Error-404", "~/Paginas/Error/404.html");
         }
     }
 }

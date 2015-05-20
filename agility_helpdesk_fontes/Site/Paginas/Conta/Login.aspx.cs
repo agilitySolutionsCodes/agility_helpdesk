@@ -108,7 +108,7 @@ namespace Site.Paginas.Conta
             {
                 ValidadorEmail.IsValid = false;
                 ValidadorEmail.ErrorMessage = "Este usuário não foi localizado no sistema";
-                ValidadorSenha.Visible = false;
+                ValidadorSenha.Visible = true;
                 ValidadorEmail.SetFocusOnError = true;
                 varValidado = false;
             }
@@ -117,7 +117,7 @@ namespace Site.Paginas.Conta
             {
                 ValidadorSenha.IsValid = false;
                 ValidadorSenha.ErrorMessage = "*Atenção a senha digitada esta incorreta";
-                ValidadorEmail.Visible = false;
+                ValidadorEmail.Visible = true;
                 ValidadorSenha.SetFocusOnError = true;
                 varValidado = false;
             }

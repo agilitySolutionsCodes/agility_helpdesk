@@ -76,7 +76,7 @@ namespace BOffice.Conta
             {
                 ValidadorEmail.IsValid = false;
                 ValidadorEmail.ErrorMessage = "Este usuário não foi localizado no sistema";
-                ValidadorEmail.Visible = false;
+                ValidadorEmail.Visible = true;
                 ValidadorEmail.SetFocusOnError = true;
                 varValidado = false;
             }
@@ -85,7 +85,7 @@ namespace BOffice.Conta
             {
                 ValidadorSenha.IsValid = false;
                 ValidadorSenha.ErrorMessage = "*Atenção a senha digitada esta incorreta";
-                ValidadorEmail.Visible = false;
+                ValidadorEmail.Visible = true;
                 ValidadorSenha.SetFocusOnError = true;
                 varValidado = false;
             }
@@ -94,7 +94,7 @@ namespace BOffice.Conta
             {
                 ValidadorSenha.IsValid = false;
                 ValidadorSenha.ErrorMessage = "*Atenção não foi possivel login no sistema entre em contato com o administrador";
-                ValidadorEmail.Visible = false;
+                ValidadorEmail.Visible = true;
                 ValidadorSenha.SetFocusOnError = true;
                 varValidado = false;
             }

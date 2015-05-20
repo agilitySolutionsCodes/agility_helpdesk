@@ -90,16 +90,16 @@
                 <div id="body">
                     <div id="left_nav" runat="server" visible="false">
 
-                        <a href="/HelpDesk/Chamados-Fila">
+                        <a href="/Chamados-Fila">
                             <img src="Style/Images/fila-de-chamados.png" alt="Fila de Chamados" id="ImgFilaChamados" class="btnFilaChamados" />
                         </a>
-                        <a href="/HelpDesk/Meus-Chamados">
+                        <a href="/Meus-Chamados">
                             <img src="Style/Images/meus-chamados.png" alt="Meus Chamados" id="ImgMeusChamados" class="btnMeusChamados" />
                         </a>
-                        <a href="/HelpDesk/Chamados-Novo">
+                        <a href="/Chamados-Novo">
                             <img src="Style/Images/novo-chamado.png" alt="Novo Chamado" id="ImgNovoChamado" class="btnNovoChamado" />
                         </a>
-                        <a href="/HelpDesk/Relatorios-Selecionar">
+                        <a href="/Relatorios-Selecionar">
                             <img src="Style/Images/relatorios.png" alt="Relatórios" id="ImgRelatorio" class="btnRelatorios" />
                         </a>
                     </div>

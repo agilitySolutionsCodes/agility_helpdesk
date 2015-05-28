@@ -84,16 +84,16 @@ namespace BOffice.Classificacoes
                     //Chama método de inserção BLL passando objeto como parâmetro
                     classificacaoBLL.InsereClassificacao(classificacao);
 
-                    string htmlEmail = "";
+                    //string htmlEmail = "";
 
                     //Envia e-mail com dados do cadastro realizado
-                    Email email = new Email();
+                    //Email email = new Email();
 
                     //Popula HTML e-mail
-                    htmlEmail = PopulaHtmlClassificacao(Server.MapPath("~/Templates/EmailNovaClassificacao.html"), Session["NomeUsuario"].ToString(), classificacao.Nome, "", DateTime.Now);
+                    //htmlEmail = PopulaHtmlClassificacao(Server.MapPath("~/Templates/EmailNovaClassificacao.html"), Session["NomeUsuario"].ToString(), classificacao.Nome, "", DateTime.Now);
 
                     // Envia E-mail
-                    email.SendEmail("yule.souza@outlook.com", "Novo Cadastro Categoria", htmlEmail, Session["NomeUsuario"].ToString(), "", DateTime.Now);
+                    //email.SendEmail("yule.souza@outlook.com", "Novo Cadastro Categoria", htmlEmail, Session["NomeUsuario"].ToString(), "", DateTime.Now);
 
                     //Exibe mensagem de cadastro realizado com sucesso
                     ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Classificação cadastrada com sucesso.');", true);

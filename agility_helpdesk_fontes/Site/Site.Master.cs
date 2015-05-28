@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using BLL;
+using BO;
 
 namespace Site
 {
@@ -74,15 +75,30 @@ namespace Site
         {
             if (!Page.IsPostBack)
             {
-                if (Session["IdUsuario"] != null)
+                if (Session["objetoUsuario"] != null)
                 {
-                    lblUsuario.InnerText = Session["NomeUsuario"].ToString();
-                    //ImgUsuarioLogado.ImageUrl = Request.ApplicationPath + "Uploads/" + Session["ImagemUsuario"].ToString();
-                    ImgUsuarioLogado.ImageUrl = Request.ApplicationPath + "/Uploads/" + Session["ImagemUsuario"].ToString();
-                    ImgUsuarioLogado.Visible = true;
-                    content_saudacao.Visible = true;
-                    search.Visible = true;
-                    left_nav.Visible = true;
+                    Usuario usuario = (Usuario)Session["objetoUsuario"];
+
+                    if (Session["IdUsuario"] != null)
+                    {
+                        lblUsuario.InnerText = Session["NomeUsuario"].ToString();
+                        //ImgUsuarioLogado.ImageUrl = Request.ApplicationPath + "Uploads/" + Session["ImagemUsuario"].ToString();
+                        ImgUsuarioLogado.ImageUrl = Request.ApplicationPath + "/Uploads/" + Session["ImagemUsuario"].ToString();
+                        ImgUsuarioLogado.Visible = true;
+                        content_saudacao.Visible = true;
+                        search.Visible = true;
+                        left_nav.Visible = true;
+
+                        if (usuario.Perfil == "S")
+                        {
+                            dvChamadosFila.Visible = false;
+                        }
+
+                        else
+                        {
+                            dvNovoChamado.Visible = false;
+                        }
+                    }
                 }
             }
         }

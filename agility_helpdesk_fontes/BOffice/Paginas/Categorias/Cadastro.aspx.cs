@@ -82,13 +82,13 @@ namespace BOffice.Categorias
                 {
                     //Chama método de inserção BLL passando objeto como parâmetro
                     categoriaBLL.InsereCategoria(categoria);
-                    string htmlEmail = "";
+                    //string htmlEmail = "";
                     //Envia e-mail com dados do cadastro realizado
-                    Email email = new Email();
+                    //Email email = new Email();
                     //Popula HTML e-mail
-                    htmlEmail = PopulaHtmlCategoria(Server.MapPath("~/Templates/EmailNovaCategoria.html"), Session["NomeUsuario"].ToString(), categoria.Nome, "", DateTime.Now);
+                    //htmlEmail = PopulaHtmlCategoria(Server.MapPath("~/Templates/EmailNovaCategoria.html"), Session["NomeUsuario"].ToString(), categoria.Nome, "", DateTime.Now);
                     // Envia E-mail
-                    email.SendEmail("yule.souza@outlook.com", "Novo Cadastro Categoria", htmlEmail, Session["NomeUsuario"].ToString(), "", DateTime.Now);
+                    //email.SendEmail("yule.souza@outlook.com", "Novo Cadastro Categoria", htmlEmail, Session["NomeUsuario"].ToString(), "", DateTime.Now);
                     //Exibe mensagem de cadastro realizado com sucesso
                     ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Categoria cadastrada com sucesso.');", true);
                 }

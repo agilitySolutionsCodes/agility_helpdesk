@@ -70,6 +70,7 @@ namespace Site.Paginas.Chamados
 
             else
             {
+                chamado.Observacao = TxtComentario.InnerText;
                 chamado = chamadosBLL.FinalizarChamadoAprovar(Convert.ToInt32(Session["IdUsuario"].ToString()), chamado.IdChamado, chamado.Observacao);
 
                 if (chamado.Ok == true)

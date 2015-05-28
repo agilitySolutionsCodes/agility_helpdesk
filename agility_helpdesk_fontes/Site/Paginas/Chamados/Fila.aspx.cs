@@ -85,17 +85,17 @@ namespace Site.Paginas.Chamados
                 //Validação para mudança de valores no grid referente a prioridade do chamado
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    if (dt.Rows[i]["Prioridade"].ToString() == "0 ")
+                    if (dt.Rows[i]["Prioridade"].ToString() == "A ")
                     {
                         dt.Rows[i]["Prioridade"] = "Alta";
                     }
 
-                    if (dt.Rows[i]["Prioridade"].ToString() == "1 ")
+                    if (dt.Rows[i]["Prioridade"].ToString() == "M ")
                     {
                         dt.Rows[i]["Prioridade"] = "Média";
                     }
 
-                    if (dt.Rows[i]["Prioridade"].ToString() == "2 ")
+                    if (dt.Rows[i]["Prioridade"].ToString() == "B ")
                     {
                         dt.Rows[i]["Prioridade"] = "Baixa";
                     }
@@ -148,17 +148,17 @@ namespace Site.Paginas.Chamados
                 //Validação para mudança de valores no grid referente a prioridade do chamado
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    if (dt.Rows[i]["Prioridade"].ToString() == "0 ")
+                    if (dt.Rows[i]["Prioridade"].ToString() == "A ")
                     {
                         dt.Rows[i]["Prioridade"] = "Alta";
                     }
 
-                    if (dt.Rows[i]["Prioridade"].ToString() == "1 ")
+                    if (dt.Rows[i]["Prioridade"].ToString() == "M ")
                     {
                         dt.Rows[i]["Prioridade"] = "Média";
                     }
 
-                    if (dt.Rows[i]["Prioridade"].ToString() == "2 ")
+                    if (dt.Rows[i]["Prioridade"].ToString() == "B ")
                     {
                         dt.Rows[i]["Prioridade"] = "Baixa";
                     }

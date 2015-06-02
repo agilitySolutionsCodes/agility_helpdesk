@@ -78,6 +78,19 @@ namespace BLL
             return dt;
         }
 
+        public DataTable ListaHistoricoComentario(int idChamado)
+        {
+            DataTable dt = new DataTable();
+
+            if (idChamado != 0)
+            {
+                chamadoDAL = new ChamadosDAL();
+                dt = chamadoDAL.ListaHistoricoComentario(idChamado);
+            }
+
+            return dt;
+        }
+
         public Chamado AtenderChamado(int idUsuario, int idChamado)
         {
             Chamado chamado = new Chamado();

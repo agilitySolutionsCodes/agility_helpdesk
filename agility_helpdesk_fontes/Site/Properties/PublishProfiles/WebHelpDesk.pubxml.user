@@ -79,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:31</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>05/18/2015 13:42:00</publishTime>
+      <publishTime>06/02/2015 16:02:49</publishTime>
     </File>
     <File Include="bin/Site.dll">
-      <publishTime>05/18/2015 13:42:01</publishTime>
+      <publishTime>06/02/2015 16:02:50</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>10/17/2013 10:27:28</publishTime>
@@ -133,7 +133,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2015 14:04:42</publishTime>
     </File>
     <File Include="Paginas/Chamados/Detalhe.aspx">
-      <publishTime>04/29/2015 14:04:49</publishTime>
+      <publishTime>06/02/2015 15:54:00</publishTime>
     </File>
     <File Include="Paginas/Chamados/Fila.aspx">
       <publishTime>04/29/2015 14:04:53</publishTime>
@@ -179,6 +179,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/jquery-ui-1.8.24.min.js">
       <publishTime>10/17/2013 10:27:25</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.js">
+      <publishTime>06/02/2015 15:20:25</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>10/17/2013 10:27:26</publishTime>
@@ -250,10 +253,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:27</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>03/31/2015 14:17:52</publishTime>
+      <publishTime>05/28/2015 14:48:52</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>10/17/2013 10:27:41</publishTime>
+    </File>
+    <File Include="Style/Css/jquery-ui.css">
+      <publishTime>06/02/2015 16:24:39</publishTime>
     </File>
     <File Include="Style/Css/Site.css">
       <publishTime>05/06/2015 10:17:45</publishTime>
@@ -607,7 +613,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/18/2015 13:42:03</publishTime>
+      <publishTime>06/02/2015 16:03:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

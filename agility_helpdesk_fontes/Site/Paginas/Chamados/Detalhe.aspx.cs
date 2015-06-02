@@ -30,6 +30,13 @@ namespace Site.Paginas.Chamados
                         if (dt.Rows.Count > 0)
                         {
                             Preencher(dt, Convert.ToInt32(Session["IdUsuario"].ToString()));
+                            dt = chamadoBLL.ListaHistoricoComentario(Convert.ToInt32(valorUrlIdChamado));
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                rptComentarios.DataSource = dt;
+                                rptComentarios.DataBind();
+                            }
 
                             //Oculta filtro de chamados
                             Label lblOrdenar = (Label)Master.FindControl("LblOrdenar");
@@ -144,6 +151,8 @@ namespace Site.Paginas.Chamados
                     if (dtChamado.Rows[i]["StatusChamado"].ToString() == "P ")
                     {
                         LblStatus.Text = "Pendente";
+                        BtnCancelar.Visible = false;
+                        BtnEncerrar.Visible = false;
                     }
 
                     if (dtChamado.Rows[i]["StatusChamado"].ToString() == "A ")

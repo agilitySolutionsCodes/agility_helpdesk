@@ -151,6 +151,8 @@
     <Content Include="Paginas\Institucional\TermosUso.aspx" />
     <Content Include="Paginas\Relatorios\Index.aspx" />
     <Content Include="Paginas\Relatorios\Selecionar.aspx" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Style\Css\jquery-ui.css" />
     <Content Include="Style\Css\Site.css" />
     <Content Include="Style\Images\baloon.png" />
     <Content Include="Style\Images\bg_content.jpg" />

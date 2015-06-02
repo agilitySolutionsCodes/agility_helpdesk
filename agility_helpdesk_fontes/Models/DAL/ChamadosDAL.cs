@@ -103,9 +103,8 @@ namespace DAL
         public DataTable ListaDetalheChamado(int idChamado)
         {
             DataTable dt = new DataTable();
-            SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
-            sqlCmd = new SqlCommand("STP_Lista_Detalhe_Chamado", sqlCon);
+            SqlCommand sqlCmd = new SqlCommand("STP_Lista_Detalhe_Chamado", sqlCon);
 
             SqlParameter sqlPm = new SqlParameter("@P_IdChamado", SqlDbType.Int);
             sqlCmd.CommandTimeout = sqlCon.ConnectionTimeout;
@@ -117,6 +116,22 @@ namespace DAL
 
             sqlCmd.ExecuteReader(CommandBehavior.CloseConnection);
 
+            return dt;
+        }
+
+        public DataTable ListaHistoricoComentario(int idChamado)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection sqlCon = conexao.GetConexao();
+            SqlCommand sqlCmd = new SqlCommand("STP_Lista_Detalhe_Chamado_Historico", sqlCon);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.CommandTimeout = sqlCon.ConnectionTimeout;
+
+            sqlCmd.Parameters.Add(new SqlParameter("@P_IdChamado", idChamado));
+            SqlDataAdapter da = new SqlDataAdapter(sqlCmd);
+            da.Fill(dt);
+
+            sqlCmd.ExecuteReader(CommandBehavior.CloseConnection);
             return dt;
         }
 
@@ -231,12 +246,12 @@ namespace DAL
             sqlCmd.Parameters.Add(new SqlParameter("@P_IdChamado", IdChamado));
             sqlCmd.Parameters.Add(new SqlParameter("@P_IdUsuario", IdUsuario));
             sqlCmd.Parameters.Add("@Ok", SqlDbType.Bit).Direction = ParameterDirection.Output;
-            
+
             sqlCmd.ExecuteReader(CommandBehavior.CloseConnection);
 
             if (Convert.ToBoolean(sqlCmd.Parameters["@Ok"].Value != DBNull.Value))
             {
-                chamado.Ok = Convert.ToBoolean(sqlCmd.Parameters["@Ok"].Value);    
+                chamado.Ok = Convert.ToBoolean(sqlCmd.Parameters["@Ok"].Value);
             }
 
             return chamado;
@@ -266,9 +281,9 @@ namespace DAL
 
             if (Convert.ToBoolean(sqlCmd.Parameters["@Ok"].Value != DBNull.Value))
             {
-                chamado.Ok = Convert.ToBoolean(sqlCmd.Parameters["@Ok"].Value);    
+                chamado.Ok = Convert.ToBoolean(sqlCmd.Parameters["@Ok"].Value);
             }
-            
+
             return chamado;
         }
 

@@ -147,6 +147,17 @@ namespace BLL
             return chamadoBLL;
         }
 
+        public Chamado InsereComentarioChamado(Chamado chamadoBLL)
+        {
+            if (chamadoBLL != null)
+            {
+                chamadoDAL = new ChamadosDAL();
+                
+            }
+
+            return chamadoBLL;
+        }
+
         #endregion
     }
 }

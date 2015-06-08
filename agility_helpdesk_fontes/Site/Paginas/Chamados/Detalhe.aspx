@@ -84,7 +84,6 @@
             </tr>
             <table width="707">
                 <asp:Repeater ID="rptComentarios" runat="server">
-
                     <HeaderTemplate>
                         <div id="accordion">
                             <%--<tr>
@@ -93,7 +92,6 @@
                                 <th>Data: </th>
                             </tr>--%>
                     </HeaderTemplate>
-
                     <ItemTemplate>
                         <h3><%#Eval("Nome")%> <%#Eval("Data")%></h3>
                         <div>
@@ -101,7 +99,6 @@
                                 <%#Eval("Comentario")%>
                             </p>
                         </div>
-
                         <%-- <tr>
                             <td><%#Eval("Nome")%></td>
                             <td><%#Eval("Comentario")%></td>
@@ -127,7 +124,7 @@
                         <button runat="server" id="BtnEncerrar" class="btnEncerrarr" onserverclick="BtnEncerrar_ServerClick" />
                     </td>
                     <td>
-                        <button runat="server" id="BtnFinalizar" class="btnFinalizar" onserverclick="BtnFinalizar_ServerClick" />
+                        <button runat="server" id="BtnFinalizar" class="btnFinalizar" onserverclick="BtnFinalizar_ServerClick" visible="false" />
                     </td>
                     <td>
                         <button runat="server" id="BtnCancelar" class="btnLimpar" onserverclick="BtnCancelar_ServerClick" />

@@ -47,29 +47,5 @@ namespace BO
         public Boolean Ok { get { return ok; } set { ok = value; } }
 
         #endregion
-
-        #region Construtor
-
-        public Chamado()
-        {
-            //Construtor inicializa as propriedades com valores 0 ou null
-            this.idChamado = 0;
-            this.empresa = string.Empty;
-            this.assunto = string.Empty;
-            this.categoria = 0;
-            this.classificacao = 0;
-            this.prioridade = string.Empty;
-            this.descricao = string.Empty;
-            this.dataAbertura = DateTime.Now;
-            this.solicitante = 0;
-            this.atendente = 0;
-            this.anexo = string.Empty;
-            this.status = string.Empty;
-            this.observacao = string.Empty;
-            this.dataFinalizacao = DateTime.Now;
-            this.ok = false;
-        }
-
-        #endregion
     }
 }

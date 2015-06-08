@@ -58,40 +58,40 @@ namespace Site.Paginas.Chamados
 
         #region Eventos
 
-        protected void BtnEncerrar_ServerClick(object sender, EventArgs e)
-        {
-            //Encerra Chamado e envia para aprovação
-            Chamado chamado = new Chamado();
-            ChamadosBLL chamadosBLL = new ChamadosBLL();
+        //protected void BtnEncerrar_ServerClick(object sender, EventArgs e)
+        //{
+        //    //Encerra Chamado e envia para aprovação
+        //    Chamado chamado = new Chamado();
+        //    ChamadosBLL chamadosBLL = new ChamadosBLL();
 
-            string valorUrlIdChamado = Request.QueryString["IdChamado"];
-            chamado.IdChamado = Convert.ToInt32(valorUrlIdChamado);
+        //    string valorUrlIdChamado = Request.QueryString["IdChamado"];
+        //    chamado.IdChamado = Convert.ToInt32(valorUrlIdChamado);
 
-            if (TxtComentario.InnerText.Length == 0 && LblComentarioII.Text == string.Empty)
-            {
-                ScriptManager.RegisterClientScriptBlock(BtnEncerrar, BtnEncerrar.GetType(), "msgAlerta", "alert('Para finalizar o chamado insira um comentário.');", true);
-                LblComentario.Visible = true;
-                TxtComentario.Visible = true;
-                TxtComentario.Focus();
-            }
+        //    if (TxtComentario.InnerText.Length == 0 && LblComentarioII.Text == string.Empty)
+        //    {
+        //        ScriptManager.RegisterClientScriptBlock(BtnEncerrar, BtnEncerrar.GetType(), "msgAlerta", "alert('Para finalizar o chamado insira um comentário.');", true);
+        //        LblComentario.Visible = true;
+        //        TxtComentario.Visible = true;
+        //        TxtComentario.Focus();
+        //    }
 
-            else
-            {
-                chamado.Observacao = TxtComentario.InnerText;
-                chamado = chamadosBLL.FinalizarChamadoAprovar(Convert.ToInt32(Session["IdUsuario"].ToString()), chamado.IdChamado, chamado.Observacao);
+        //    else
+        //    {
+        //        chamado.Observacao = TxtComentario.InnerText;
+        //        chamado = chamadosBLL.FinalizarChamadoAprovar(Convert.ToInt32(Session["IdUsuario"].ToString()), chamado.IdChamado, chamado.Observacao);
 
-                if (chamado.Ok == true)
-                {
-                    Session.Add("StatusChamadoFA", chamado.Ok);
-                    Response.Redirect("~/Meus-Chamados");
-                }
+        //        if (chamado.Ok == true)
+        //        {
+        //            Session.Add("StatusChamadoFA", chamado.Ok);
+        //            Response.Redirect("~/Meus-Chamados");
+        //        }
 
-                else
-                {
-                    ScriptManager.RegisterClientScriptBlock(BtnEncerrar, BtnEncerrar.GetType(), "msgFalha", "alert('Não é possivel finalizar um chamado aberto por você.');", true);
-                }
-            }
-        }
+        //        else
+        //        {
+        //            ScriptManager.RegisterClientScriptBlock(BtnEncerrar, BtnEncerrar.GetType(), "msgFalha", "alert('Não é possivel finalizar um chamado aberto por você.');", true);
+        //        }
+        //    }
+        //}
 
         protected void BtnFinalizar_ServerClick(object sender, EventArgs e)
         {
@@ -102,13 +102,13 @@ namespace Site.Paginas.Chamados
             ChamadosBLL chamadosBLL = new ChamadosBLL();
 
             chamado.IdChamado = Convert.ToInt32(valorUrlIdChamado);
-            chamado.Observacao = TxtComentario.Value;
+            //chamado.Observacao = TxtComentario.Value;
 
-            if (LblComentarioII.Text != string.Empty)
-            {
-                chamado = chamadosBLL.FinalizarChamado(Convert.ToInt32(Session["IdUsuario"].ToString()), chamado.IdChamado);
-                ScriptManager.RegisterClientScriptBlock(BtnFinalizar, BtnFinalizar.GetType(), "msgSucesso", "alert('Chamado finalizado com sucesso.');", true);
-            }
+            //if (LblComentarioII.Text != string.Empty)
+            //{
+            //    chamado = chamadosBLL.FinalizarChamado(Convert.ToInt32(Session["IdUsuario"].ToString()), chamado.IdChamado);
+            //    ScriptManager.RegisterClientScriptBlock(BtnFinalizar, BtnFinalizar.GetType(), "msgSucesso", "alert('Chamado finalizado com sucesso.');", true);
+            //}
         }
 
         protected void BtnCancelar_ServerClick(object sender, EventArgs e)
@@ -136,9 +136,9 @@ namespace Site.Paginas.Chamados
 
             if (dtChamado.Rows[0]["Observacao"].ToString() != "")
             {
-                LblComentario.Visible = true;
-                LblComentarioII.Visible = true;
-                LblComentarioII.Text = dtChamado.Rows[0]["Observacao"].ToString();
+                //LblComentario.Visible = true;
+                //LblComentarioII.Visible = true;
+                //LblComentarioII.Text = dtChamado.Rows[0]["Observacao"].ToString();
             }
 
             LtlDescricao.Text = dtChamado.Rows[0]["Descricao"].ToString();
@@ -152,13 +152,14 @@ namespace Site.Paginas.Chamados
                     {
                         LblStatus.Text = "Pendente";
                         BtnCancelar.Visible = false;
-                        BtnEncerrar.Visible = false;
+                        //BtnEncerrar.Visible = false;
                     }
 
                     if (dtChamado.Rows[i]["StatusChamado"].ToString() == "A ")
                     {
                         LblStatus.Text = "Em atendimento";
                         BtnFinalizar.Visible = false;
+                        BtnCancelar.Visible = false;
                     }
 
                     if (dtChamado.Rows[i]["StatusChamado"].ToString() == "FA")
@@ -169,7 +170,7 @@ namespace Site.Paginas.Chamados
                     if (dtChamado.Rows[i]["StatusChamado"].ToString() == "F ")
                     {
                         LblStatus.Text = "Finalizado";
-                        BtnEncerrar.Visible = false;
+                        //BtnEncerrar.Visible = false;
                         BtnFinalizar.Visible = false;
                         BtnCancelar.Visible = false;
                     }
@@ -182,7 +183,8 @@ namespace Site.Paginas.Chamados
 
                     if (dtChamado.Rows[i]["StatusChamado"].ToString() == "A" && Convert.ToInt32(dtChamado.Rows[i]["Atendente"].ToString()) == idUsuario)
                     {
-                        BtnEncerrar.Visible = true;
+                        BtnFinalizar.Visible = true;
+                        //BtnEncerrar.Visible = true;
                         BtnCancelar.Visible = false;
                     }
                 }

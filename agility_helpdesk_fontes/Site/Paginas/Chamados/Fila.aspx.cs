@@ -198,27 +198,27 @@ namespace Site.Paginas.Chamados
             return direcaoSorteio;
         }
 
-        protected void BtnAtender_ServerClick(object sender, EventArgs e)
-        {
-            int nIndice = ((GridViewRow)((Control)sender).NamingContainer).RowIndex;
-            GridViewRow gvr = GrdChamados.Rows[nIndice];
-            Chamado chamado = new Chamado();
-            chamado = AtenderChamado(gvr);
+        //protected void BtnAtender_ServerClick(object sender, EventArgs e)
+        //{
+        //    int nIndice = ((GridViewRow)((Control)sender).NamingContainer).RowIndex;
+        //    GridViewRow gvr = GrdChamados.Rows[nIndice];
+        //    Chamado chamado = new Chamado();
+        //    chamado = AtenderChamado(gvr);
 
-            if (chamado.Ok == true)
-            {
-                //Chamado Pode ser atendido pelo usuário logado no sistema    
-                ScriptManager.RegisterClientScriptBlock(GrdChamados, GrdChamados.GetType(), "msgSucesso", "alert('Sucesso.');", true);
-                Response.Redirect("~/Meus-Chamados");
-            }
+        //    if (chamado.Ok == true)
+        //    {
+        //        //Chamado Pode ser atendido pelo usuário logado no sistema    
+        //        ScriptManager.RegisterClientScriptBlock(GrdChamados, GrdChamados.GetType(), "msgSucesso", "alert('Sucesso.');", true);
+        //        Response.Redirect("~/Meus-Chamados");
+        //    }
 
-            else
-            {
-                //Mensagem erro aqui
-                ScriptManager.RegisterClientScriptBlock(GrdChamados, GrdChamados.GetType(), "msgFalha", "alert('Não é possivel atender um chamado aberto por você.');", true);
-            }
+        //    else
+        //    {
+        //        //Mensagem erro aqui
+        //        ScriptManager.RegisterClientScriptBlock(GrdChamados, GrdChamados.GetType(), "msgFalha", "alert('Não é possivel atender um chamado aberto por você.');", true);
+        //    }
 
-        }
+        //}
 
         protected Chamado AtenderChamado(GridViewRow oRow)
         {

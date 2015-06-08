@@ -79,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:31</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>06/02/2015 16:02:49</publishTime>
+      <publishTime>06/08/2015 13:45:37</publishTime>
     </File>
     <File Include="bin/Site.dll">
-      <publishTime>06/02/2015 16:02:50</publishTime>
+      <publishTime>06/08/2015 13:45:38</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>10/17/2013 10:27:28</publishTime>
@@ -133,10 +133,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2015 14:04:42</publishTime>
     </File>
     <File Include="Paginas/Chamados/Detalhe.aspx">
-      <publishTime>06/02/2015 15:54:00</publishTime>
+      <publishTime>06/08/2015 11:44:34</publishTime>
     </File>
     <File Include="Paginas/Chamados/Fila.aspx">
-      <publishTime>04/29/2015 14:04:53</publishTime>
+      <publishTime>06/08/2015 09:56:23</publishTime>
     </File>
     <File Include="Paginas/Chamados/MeusChamados.aspx">
       <publishTime>04/29/2015 14:05:01</publishTime>
@@ -613,7 +613,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/02/2015 16:03:08</publishTime>
+      <publishTime>06/08/2015 13:46:38</publishTime>
     </File>
   </ItemGroup>
 </Project>

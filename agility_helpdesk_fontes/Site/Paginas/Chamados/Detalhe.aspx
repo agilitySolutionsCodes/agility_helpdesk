@@ -75,61 +75,62 @@
             </tr>
             <tr>
                 <td colspan="3" class="default2">
-                    <strong>
-                        <asp:Label ID="LblComentario" Visible="false" Text="Comentário:" runat="server" />
-                    </strong>
+
+                    <a href="">+ Adicionar Comentário</a>
+                    <%--<asp:Label ID="LblComentario" Visible="false" Text="Comentário:" runat="server" />--%>
                     <textarea name="TxtComentario" visible="false" maxlength="255" cols="45" rows="5" class="comentarios" id="TxtComentario" runat="server"></textarea>
-                    <asp:Label ID="LblComentarioII" Visible="false" Text="" runat="server" />
+                    <%--<asp:Label ID="LblComentarioII" Visible="false" Text="" runat="server" />--%>
                 </td>
             </tr>
-            <table width="707">
-                <asp:Repeater ID="rptComentarios" runat="server">
-                    <HeaderTemplate>
-                        <div id="accordion">
-                            <%--<tr>
+        </table>
+        <table width="707">
+            <asp:Repeater ID="rptComentarios" runat="server">
+                <HeaderTemplate>
+                    <div id="accordion">
+                        <%--<tr>
                                 <th>Por: </th>
                                 <th>Comentário: </th>
                                 <th>Data: </th>
                             </tr>--%>
-                    </HeaderTemplate>
-                    <ItemTemplate>
-                        <h3><%#Eval("Nome")%> <%#Eval("Data")%></h3>
-                        <div>
-                            <p>
-                                <%#Eval("Comentario")%>
-                            </p>
-                        </div>
-                        <%-- <tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <h3><%#Eval("Data")%>  <%#Eval("Nome")%></h3>
+                    <div>
+                        <p>
+                            <%#Eval("Comentario")%>
+                        </p>
+                    </div>
+                    <%-- <tr>
                             <td><%#Eval("Nome")%></td>
                             <td><%#Eval("Comentario")%></td>
                             <td><%#Eval("Data")%></td>
                         </tr>--%>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                        </div>
-                    </FooterTemplate>
-                </asp:Repeater>
-            </table>
-            <table width="504">
-                <tr>
-                    <td width="153">&nbsp;</td>
-                    <td width="339">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </div>
+                </FooterTemplate>
+            </asp:Repeater>
+        </table>
+        <table width="504">
+            <tr>
+                <td width="153">&nbsp;</td>
+                <td width="339">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <%--<td>
                         <button runat="server" id="BtnEncerrar" class="btnEncerrarr" onserverclick="BtnEncerrar_ServerClick" />
-                    </td>
-                    <td>
-                        <button runat="server" id="BtnFinalizar" class="btnFinalizar" onserverclick="BtnFinalizar_ServerClick" visible="false" />
-                    </td>
-                    <td>
-                        <button runat="server" id="BtnCancelar" class="btnLimpar" onserverclick="BtnCancelar_ServerClick" />
-                    </td>
-                </tr>
-            </table>
+                    </td>--%>
+                <td>
+                    <button runat="server" id="BtnFinalizar" class="btnFinalizar" onserverclick="BtnFinalizar_ServerClick" visible="false" />
+                </td>
+                <td>
+                    <button runat="server" id="BtnCancelar" class="btnLimpar" onserverclick="BtnCancelar_ServerClick" />
+                </td>
+            </tr>
+        </table>
     </div>
 </asp:Content>

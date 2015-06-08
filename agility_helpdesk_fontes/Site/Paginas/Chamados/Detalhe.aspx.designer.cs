@@ -94,15 +94,6 @@ namespace Site.Paginas.Chamados {
         protected global::System.Web.UI.WebControls.Literal LtlDescricao;
         
         /// <summary>
-        /// LblComentario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblComentario;
-        
-        /// <summary>
         /// TxtComentario control.
         /// </summary>
         /// <remarks>
@@ -112,15 +103,6 @@ namespace Site.Paginas.Chamados {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TxtComentario;
         
         /// <summary>
-        /// LblComentarioII control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblComentarioII;
-        
-        /// <summary>
         /// rptComentarios control.
         /// </summary>
         /// <remarks>
@@ -128,15 +110,6 @@ namespace Site.Paginas.Chamados {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptComentarios;
-        
-        /// <summary>
-        /// BtnEncerrar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton BtnEncerrar;
         
         /// <summary>
         /// BtnFinalizar control.

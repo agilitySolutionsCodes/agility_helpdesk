@@ -14,7 +14,6 @@ using BLL;
 
 namespace BOffice.Usuarios
 {
-    #region Usuarios
     public partial class Cadastro : System.Web.UI.Page
     {
         #region Eventos
@@ -331,5 +330,4 @@ namespace BOffice.Usuarios
 
         #endregion
     }
-    #endregion
 }

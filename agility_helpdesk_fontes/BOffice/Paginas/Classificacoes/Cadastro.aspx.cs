@@ -13,7 +13,6 @@ using AgilityHelpDesk.Util;
 
 namespace BOffice.Classificacoes
 {
-    #region Classificacoes
     public partial class Cadastro : System.Web.UI.Page
     {
         #region Eventos
@@ -64,44 +63,30 @@ namespace BOffice.Classificacoes
             //Preenche o objeto classificação com dados do formulário
             classificacao = Preencher(classificacao);
 
-            //Se a validação estiver Ok
-            if (ValidaCampos(classificacao) == true)
+            //Instância de BLL
+            ClassificacaoBLL classificacaoBLL = new ClassificacaoBLL();
+
+            if (classificacao.IdClassificacao != 0)
             {
-                //Instância de BLL
-                ClassificacaoBLL classificacaoBLL = new ClassificacaoBLL();
+                //Chama método de atualização BLL passando objeto como parâmetro
+                classificacaoBLL.AtualizaClassificacao(classificacao);
 
-                if (classificacao.IdClassificacao != 0)
-                {
-                    //Chama método de atualização BLL passando objeto como parâmetro
-                    classificacaoBLL.AtualizaClassificacao(classificacao);
-
-                    //Exibe mensagem de cadastro realizado com sucesso
-                    ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Classificação atualizada com sucesso.');", true);
-                }
-
-                else
-                {
-                    //Chama método de inserção BLL passando objeto como parâmetro
-                    classificacaoBLL.InsereClassificacao(classificacao);
-
-                    //string htmlEmail = "";
-
-                    //Envia e-mail com dados do cadastro realizado
-                    //Email email = new Email();
-
-                    //Popula HTML e-mail
-                    //htmlEmail = PopulaHtmlClassificacao(Server.MapPath("~/Templates/EmailNovaClassificacao.html"), Session["NomeUsuario"].ToString(), classificacao.Nome, "", DateTime.Now);
-
-                    // Envia E-mail
-                    //email.SendEmail("yule.souza@outlook.com", "Novo Cadastro Categoria", htmlEmail, Session["NomeUsuario"].ToString(), "", DateTime.Now);
-
-                    //Exibe mensagem de cadastro realizado com sucesso
-                    ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Classificação cadastrada com sucesso.');", true);
-                }
-
-                //Limpa campos do formulário após inserir
-                LimpaCampos();
+                //Exibe mensagem de cadastro realizado com sucesso
+                ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Classificação atualizada com sucesso.');", true);
             }
+
+            else
+            {
+                //Chama método de inserção BLL passando objeto como parâmetro
+                classificacaoBLL.InsereClassificacao(classificacao);
+
+                //Exibe mensagem de cadastro realizado com sucesso
+                ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Classificação cadastrada com sucesso.');", true);
+            }
+
+            //Limpa campos do formulário após inserir
+            LimpaCampos();
+
         }
 
         protected void BtnLimpar_ServerClick(object sender, EventArgs e)
@@ -139,7 +124,7 @@ namespace BOffice.Classificacoes
                 classificacao.Ativo = false;
             }
 
-            classificacao.Empresa =  Convert.ToInt32(Session["EmpresaUsuario"].ToString());
+            classificacao.Empresa = Convert.ToInt32(Session["EmpresaUsuario"].ToString());
 
             return classificacao;
         }
@@ -154,13 +139,6 @@ namespace BOffice.Classificacoes
             classificacao.Ativo = Convert.ToBoolean(dt.Rows[0]["Ativo"].ToString());
 
             return classificacao;
-        }
-
-        protected Boolean ValidaCampos(Classificacao classificacao)
-        {
-            Boolean varValidado = true;
-
-            return varValidado;
         }
 
         protected void CarregaClassificacao(DataTable objClassificacao)
@@ -206,5 +184,4 @@ namespace BOffice.Classificacoes
 
         #endregion
     }
-    #endregion
 }

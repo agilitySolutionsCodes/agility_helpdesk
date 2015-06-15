@@ -435,6 +435,15 @@ body {
     cursor: pointer;
 }
 
+.btnLimparDetalhe {
+    background-image: url(../../Style/Images/cancelar.png);
+    border: 0;
+    width: 82px;
+    height: 28px;
+    float: right;
+    cursor: pointer;
+}
+
 .btnSair {
     background-image: url(../../Style/Images/sair.png);
     border: 0;
@@ -449,7 +458,7 @@ body {
     width: 131px;
     height: 28px;
     cursor: pointer;
-    float: left;
+    float: right;
     margin: 1px 1px 1px 1px;
 }
 
@@ -471,6 +480,26 @@ body {
     cursor: pointer;
     float: left;
     margin: 1px 1px 1px 1px;
+}
+
+.btnEnviar {
+    background-image: url(../../Style/Images/enviar.png);
+    border: 0;
+    width: 83px;
+    height: 28px;
+    cursor: pointer;
+    float: right;
+    margin: 1px 70px 1px 1px;
+}
+
+.btnEnviarDetalhe {
+    background-image: url(../../Style/Images/enviar.png);
+    border: 0;
+    width: 83px;
+    height: 28px;
+    cursor: pointer;
+    float: right;
+    margin: 1px 70px 1px 1px;
 }
 
 .btnFilaChamados {
@@ -557,6 +586,12 @@ body {
     height: 40px;
     border: 0;
     float: left;
+}
+
+.dvBtns {
+    width: 1000px;
+    height: 35px;
+    border: 1px solid;  
 }
 
 .ChartControlStyle {

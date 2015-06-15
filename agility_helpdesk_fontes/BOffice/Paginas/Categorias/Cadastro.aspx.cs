@@ -13,7 +13,6 @@ using AgilityHelpDesk.Util;
 
 namespace BOffice.Categorias
 {
-    #region Categorias
     public partial class Cadastro : System.Web.UI.Page
     {
         #region Eventos
@@ -26,9 +25,9 @@ namespace BOffice.Categorias
                     if (Session["IdCategoriaUpdate"] != null)
                     {
                         Categoria categoria = new Categoria();
-
                         DataTable dt = new DataTable();
                         CategoriaBLL categoriaBLL = new CategoriaBLL();
+
                         dt = categoriaBLL.ListaCategoriaPorId(Convert.ToInt32(Session["IdCategoriaUpdate"].ToString()));
 
                         //Remove session que contém o código da categoria
@@ -68,34 +67,22 @@ namespace BOffice.Categorias
             //Preenche o objeto categoria com dados do formulário
             categoria = Preencher(categoria);
 
-            //Se a validação estiver Ok
-            if (ValidaCampos(categoria) == true)
+            if (categoria.IdCategoria != 0)
             {
-                if (categoria.IdCategoria != 0)
-                {
-                    categoriaBLL.AtualizaCategoriaPorId(categoria);
-                    //Exibe mensagem de cadastro atualizado com sucesso
-                    ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Categoria atualizada com sucesso.');", true);
-                }
-
-                else
-                {
-                    //Chama método de inserção BLL passando objeto como parâmetro
-                    categoriaBLL.InsereCategoria(categoria);
-                    //string htmlEmail = "";
-                    //Envia e-mail com dados do cadastro realizado
-                    //Email email = new Email();
-                    //Popula HTML e-mail
-                    //htmlEmail = PopulaHtmlCategoria(Server.MapPath("~/Templates/EmailNovaCategoria.html"), Session["NomeUsuario"].ToString(), categoria.Nome, "", DateTime.Now);
-                    // Envia E-mail
-                    //email.SendEmail("yule.souza@outlook.com", "Novo Cadastro Categoria", htmlEmail, Session["NomeUsuario"].ToString(), "", DateTime.Now);
-                    //Exibe mensagem de cadastro realizado com sucesso
-                    ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Categoria cadastrada com sucesso.');", true);
-                }
-
-                //Limpa campos após cadastro ser realizado
-                LimpaCampos();
+                categoriaBLL.AtualizaCategoriaPorId(categoria);
+                //Exibe mensagem de cadastro atualizado com sucesso
+                ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Categoria atualizada com sucesso.');", true);
             }
+
+            else
+            {
+                categoriaBLL.InsereCategoria(categoria);
+                ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Categoria cadastrada com sucesso.');", true);
+            }
+
+            //Limpa campos após cadastro ser realizado
+            LimpaCampos();
+
         }
 
         protected void BtnLimpar_ServerClick(object sender, EventArgs e)
@@ -134,7 +121,6 @@ namespace BOffice.Categorias
 
             categoria.Empresa = Convert.ToInt32(Session["EmpresaUsuario"].ToString());
 
-            //Retorna Objeto
             return categoria;
         }
 
@@ -148,12 +134,6 @@ namespace BOffice.Categorias
             categoria.Ativo = Convert.ToBoolean(dt.Rows[0]["Ativo"].ToString());
 
             return categoria;
-        }
-
-        protected Boolean ValidaCampos(Categoria categoria)
-        {
-            Boolean varValidado = true;
-            return varValidado;
         }
 
         protected void PreencherCampos(DataTable objCategoria)
@@ -181,7 +161,6 @@ namespace BOffice.Categorias
             StreamReader streamReader = new StreamReader(caminhoHTML);
             corpoEmail = streamReader.ReadToEnd();
 
-            //Preenche campos do HTML com os dados do cadastro realizado
             corpoEmail = corpoEmail.Replace("{NomeUsuario}", nomeUsuario);
             corpoEmail = corpoEmail.Replace("{NomeCategoria}", nomeCategoria);
             corpoEmail = corpoEmail.Replace("{linkAcesso}", linkAcesso);
@@ -198,5 +177,4 @@ namespace BOffice.Categorias
         }
         #endregion
     }
-    #endregion 
 }

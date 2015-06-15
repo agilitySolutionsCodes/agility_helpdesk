@@ -30,13 +30,8 @@ namespace Site.Paginas.Chamados
                         if (dt.Rows.Count > 0)
                         {
                             Preencher(dt, Convert.ToInt32(Session["IdUsuario"].ToString()));
-                            dt = chamadoBLL.ListaHistoricoComentario(Convert.ToInt32(valorUrlIdChamado));
 
-                            if (dt.Rows.Count > 0)
-                            {
-                                rptComentarios.DataSource = dt;
-                                rptComentarios.DataBind();
-                            }
+                            ListaComentarios(Convert.ToInt32(valorUrlIdChamado));
 
                             //Oculta filtro de chamados
                             Label lblOrdenar = (Label)Master.FindControl("LblOrdenar");
@@ -113,7 +108,51 @@ namespace Site.Paginas.Chamados
 
         protected void BtnCancelar_ServerClick(object sender, EventArgs e)
         {
-            Response.Redirect("~/Meus-Chamados");
+            BtnFinalizar.Visible = true;
+            LnkComentario.Visible = true;
+            TxtComentario.Visible = false;
+            BtnEnviar.Visible = false;
+            BtnCancelar.Visible = false;
+        }
+
+        protected void LnkComentario_ServerClick(object sender, EventArgs e)
+        {
+            BtnFinalizar.Visible = false;
+            LnkComentario.Visible = false;
+            TxtComentario.Visible = true;
+            BtnCancelar.Visible = true;
+            BtnEnviar.Visible = true;
+        }
+
+        protected void BtnEnviarComentario_ServerClick(object sender, EventArgs e)
+        {
+            ChamadosBLL chamadoBLL = new ChamadosBLL();
+            Chamado chamado = new Chamado();
+            chamado.IdChamado = Convert.ToInt32(Request.QueryString["IdChamado"]);
+            chamado.Solicitante = Convert.ToInt32(Session["IdUsuario"]);
+            chamado.Observacao = TxtComentario.Value;
+            chamado.DataModificacao = DateTime.Now;
+
+            chamadoBLL.InsereComentarioChamado(chamado);
+
+            ScriptManager.RegisterClientScriptBlock(BtnEnviar, BtnEnviar.GetType(), "msgAlerta", "alert('Comentário enviado com sucesso.');", true);
+            LimparCampos();
+            ListaComentarios(Convert.ToInt32(Request.QueryString["IdChamado"]));
+            OcultaPainelComentario();
+        }
+
+        protected void ListaComentarios(int idChamado)
+        {
+            DataTable dt = new DataTable();
+            ChamadosBLL chamadoBLL = new ChamadosBLL();
+
+            dt = chamadoBLL.ListaHistoricoComentario(idChamado);
+
+            if (dt.Rows.Count > 0)
+            {
+                rptComentarios.DataSource = dt;
+                rptComentarios.DataBind();
+            }
         }
 
         #endregion
@@ -208,6 +247,20 @@ namespace Site.Paginas.Chamados
                     }
                 }
             }
+        }
+
+        protected void OcultaPainelComentario()
+        {
+            BtnFinalizar.Visible = true;
+            LnkComentario.Visible = true;
+            TxtComentario.Visible = false;
+            BtnEnviar.Visible = false;
+            BtnCancelar.Visible = false;
+        }
+
+        protected void LimparCampos()
+        {
+            TxtComentario.Value = string.Empty;
         }
 
         #endregion

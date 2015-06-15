@@ -73,63 +73,39 @@
             <tr>
                 <td>&nbsp;</td>
             </tr>
+
+        </table>
+        <table width="707">
+            <asp:Repeater ID="rptComentarios" runat="server">
+                <HeaderTemplate>
+                    <div id="accordion">
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <h3><%#Eval("Data")%>  <%#Eval("Nome")%></h3>
+                    <div>
+                        <p>
+                            <%#Eval("Comentario")%>
+                        </p>
+                    </div>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </div>
+                </FooterTemplate>
+            </asp:Repeater>
             <tr>
                 <td colspan="3" class="default2">
-                    <strong>
-                        <asp:Label ID="LblComentario" Visible="false" Text="Comentário:" runat="server" />
-                    </strong>
+                    <asp:LinkButton ID="LnkComentario" runat="server" OnClick="LnkComentario_ServerClick" Text="+ Adicionar Comentário" />
                     <textarea name="TxtComentario" visible="false" maxlength="255" cols="45" rows="5" class="comentarios" id="TxtComentario" runat="server"></textarea>
-                    <asp:Label ID="LblComentarioII" Visible="false" Text="" runat="server" />
+                    <br />
+                    <asp:RequiredFieldValidator ID="ValidadorComentario" runat="server" ControlToValidate="TxtComentario" CssClass="field-validation-error" ErrorMessage="*Comentário é obrigatório." ValidationGroup="ValidacaoComentario" />
+                    <button runat="server" id="BtnEnviar" class="btnEnviarDetalhe" onserverclick="BtnEnviarComentario_ServerClick" visible="false" validationgroup="ValidacaoComentario" />
+                    <button runat="server" id="BtnCancelar" class="btnLimparDetalhe" onserverclick="BtnCancelar_ServerClick" />
+
                 </td>
             </tr>
-            <table width="707">
-                <asp:Repeater ID="rptComentarios" runat="server">
-                    <HeaderTemplate>
-                        <div id="accordion">
-                            <%--<tr>
-                                <th>Por: </th>
-                                <th>Comentário: </th>
-                                <th>Data: </th>
-                            </tr>--%>
-                    </HeaderTemplate>
-                    <ItemTemplate>
-                        <h3><%#Eval("Nome")%> <%#Eval("Data")%></h3>
-                        <div>
-                            <p>
-                                <%#Eval("Comentario")%>
-                            </p>
-                        </div>
-                        <%-- <tr>
-                            <td><%#Eval("Nome")%></td>
-                            <td><%#Eval("Comentario")%></td>
-                            <td><%#Eval("Data")%></td>
-                        </tr>--%>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                        </div>
-                    </FooterTemplate>
-                </asp:Repeater>
-            </table>
-            <table width="504">
-                <tr>
-                    <td width="153">&nbsp;</td>
-                    <td width="339">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <%--<td>
-                        <button runat="server" id="BtnEncerrar" class="btnEncerrarr" onserverclick="BtnEncerrar_ServerClick" />
-                    </td>--%>
-                    <td>
-                        <button runat="server" id="BtnFinalizar" class="btnFinalizar" onserverclick="BtnFinalizar_ServerClick" visible="false" />
-                    </td>
-                    <td>
-                        <button runat="server" id="BtnCancelar" class="btnLimpar" onserverclick="BtnCancelar_ServerClick" />
-                    </td>
-                </tr>
-            </table>
+        </table>
+        <div>
+            <button runat="server" id="BtnFinalizar" class="btnFinalizar" onserverclick="BtnFinalizar_ServerClick" visible="false" />
+        </div>
     </div>
 </asp:Content>

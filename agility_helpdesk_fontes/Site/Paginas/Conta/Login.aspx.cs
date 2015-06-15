@@ -71,7 +71,7 @@ namespace Site.Paginas.Conta
                 Session.Add("objetoUsuario", usuario);
 
                 //Redireciona a página inicial
-                Response.Redirect("~/Chamados-Fila");
+                Response.Redirect("~/Chamados-Fila");                
             }
         }
 

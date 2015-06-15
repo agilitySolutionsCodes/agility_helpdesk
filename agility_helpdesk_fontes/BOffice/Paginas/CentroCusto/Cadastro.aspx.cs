@@ -56,13 +56,9 @@ namespace BOffice.CentroCustos
 
         protected void BtnCadastrar_ServerClick(object sender, EventArgs e)
         {
-            //Instância de BLL
             CentroCustosBLL centroCustoBLL = new CentroCustosBLL();
-
-            //Declaração de onjeto nulo
             CentroCusto centroCusto = null;
 
-            //Verifica se o objeto é diferente de nulo
             if (Session["objCentroCusto"] != null)
             {
                 //Instância objeto com valores da session
@@ -78,26 +74,23 @@ namespace BOffice.CentroCustos
             centroCusto = Preencher(centroCusto);
 
             //Se a validação estiver ok
-            if (ValidaCampos(centroCusto) == true)
-            {
-                if (centroCusto.IdCentroCusto != 0)
-                {
-                    //Chama método de atualização BLL
-                    centroCustoBLL.AtualizaCentroCustoPorId(centroCusto);
-                    //Exibe mensagem de cadastro atualizado com sucesso
-                    ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Centro de Custo atualizado com sucesso.');", true);
-                }
 
-                else
-                {
-                    //Chama método de inserção BLL passando objeto como parâmetro
-                    centroCustoBLL.InsereCentroCusto(centroCusto);
-                    //Exibe mensagem de cadastro realizado com sucesso
-                    ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Centro de Custo cadastrado com sucesso.');", true);
-                }
+            if (centroCusto.IdCentroCusto != 0)
+            {
+                //Chama método de atualização BLL
+                centroCustoBLL.AtualizaCentroCustoPorId(centroCusto);
+                //Exibe mensagem de cadastro atualizado com sucesso
+                ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Centro de Custo atualizado com sucesso.');", true);
             }
 
-            //Limpa campos após cadastro ser realizado
+            else
+            {
+                //Chama método de inserção BLL passando objeto como parâmetro
+                centroCustoBLL.InsereCentroCusto(centroCusto);
+                //Exibe mensagem de cadastro realizado com sucesso
+                ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Centro de Custo cadastrado com sucesso.');", true);
+            }
+
             LimpaCampos();
         }
 
@@ -128,8 +121,6 @@ namespace BOffice.CentroCustos
             {
                 centroCusto = new CentroCusto();
             }
-
-            //Se campos foram preenchidos atribui os valores ao objeto 
 
             if (!string.IsNullOrEmpty(TxtDescricao.Value))
             {
@@ -182,13 +173,6 @@ namespace BOffice.CentroCustos
             {
                 DrpAtivo.SelectedValue = "Nao";
             }
-        }
-
-        protected Boolean ValidaCampos(CentroCusto centroCusto)
-        {
-            Boolean varValidado = true;
-
-            return varValidado;
         }
 
         protected void LimpaCampos()

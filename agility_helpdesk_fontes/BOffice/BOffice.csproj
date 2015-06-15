@@ -129,13 +129,6 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
-    <Content Include="Js\Categoria.js" />
-    <Content Include="Js\CentroCusto.js" />
-    <Content Include="Js\Chamados.js" />
-    <Content Include="Js\Classificacao.js" />
-    <Content Include="Js\Contato.js" />
-    <Content Include="Js\Empresa.js" />
-    <Content Include="Js\Usuario.js" />
     <Content Include="Paginas\Categorias\Cadastro.aspx" />
     <Content Include="Paginas\Categorias\Manutencao.aspx" />
     <Content Include="Paginas\CentroCusto\Cadastro.aspx" />
@@ -145,7 +138,6 @@
     <Content Include="Paginas\Error\404.aspx" />
     <Content Include="Paginas\Error\404.html" />
     <Content Include="Paginas\Institucional\Ajuda.aspx" />
-    <Content Include="Paginas\Institucional\Contato.aspx" />
     <Content Include="Paginas\Conta\Login.aspx" />
     <Content Include="Paginas\Empresas\Cadastro.aspx" />
     <Content Include="Paginas\Empresas\Manutencao.aspx" />
@@ -384,13 +376,6 @@
     <Compile Include="Paginas\Institucional\Ajuda.aspx.designer.cs">
       <DependentUpon>Ajuda.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Institucional\Contato.aspx.cs">
-      <DependentUpon>Contato.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Paginas\Institucional\Contato.aspx.designer.cs">
-      <DependentUpon>Contato.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Paginas\Conta\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -496,6 +481,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Js\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>

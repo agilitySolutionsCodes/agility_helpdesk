@@ -79,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:31</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>06/08/2015 13:45:37</publishTime>
+      <publishTime>06/15/2015 16:49:16</publishTime>
     </File>
     <File Include="bin/Site.dll">
-      <publishTime>06/08/2015 13:45:38</publishTime>
+      <publishTime>06/15/2015 16:49:16</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>10/17/2013 10:27:28</publishTime>
@@ -97,7 +97,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/03/2014 11:30:46</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>04/29/2015 14:06:00</publishTime>
+      <publishTime>06/15/2015 13:34:28</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>12/10/2013 16:59:41</publishTime>
@@ -130,22 +130,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/07/2014 11:06:18</publishTime>
     </File>
     <File Include="Paginas/Busca/Index.aspx">
-      <publishTime>04/29/2015 14:04:42</publishTime>
+      <publishTime>06/15/2015 13:34:34</publishTime>
     </File>
     <File Include="Paginas/Chamados/Detalhe.aspx">
-      <publishTime>06/08/2015 11:44:34</publishTime>
+      <publishTime>06/15/2015 16:12:11</publishTime>
     </File>
     <File Include="Paginas/Chamados/Fila.aspx">
-      <publishTime>06/08/2015 09:56:23</publishTime>
+      <publishTime>06/15/2015 13:35:24</publishTime>
     </File>
     <File Include="Paginas/Chamados/MeusChamados.aspx">
-      <publishTime>04/29/2015 14:05:01</publishTime>
+      <publishTime>06/15/2015 13:35:32</publishTime>
     </File>
     <File Include="Paginas/Chamados/NovoChamado.aspx">
       <publishTime>04/29/2015 14:05:06</publishTime>
     </File>
     <File Include="Paginas/Conta/Login.aspx">
-      <publishTime>04/29/2015 14:04:31</publishTime>
+      <publishTime>06/09/2015 17:28:51</publishTime>
     </File>
     <File Include="Paginas/Conta/Recuperar.aspx">
       <publishTime>04/29/2015 14:05:18</publishTime>
@@ -259,10 +259,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:41</publishTime>
     </File>
     <File Include="Style/Css/jquery-ui.css">
-      <publishTime>06/02/2015 16:24:39</publishTime>
+      <publishTime>06/15/2015 15:32:23</publishTime>
     </File>
     <File Include="Style/Css/Site.css">
-      <publishTime>05/06/2015 10:17:45</publishTime>
+      <publishTime>06/15/2015 15:36:51</publishTime>
+    </File>
+    <File Include="Style/Images/atender.png">
+      <publishTime>06/01/2015 14:28:12</publishTime>
     </File>
     <File Include="Style/Images/baloon.png">
       <publishTime>12/05/2013 14:28:04</publishTime>
@@ -613,7 +616,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/08/2015 13:46:38</publishTime>
+      <publishTime>06/15/2015 16:49:17</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -80,12 +80,6 @@
                     </ItemTemplate>
                     <HeaderStyle Width="178" HorizontalAlign="Center" CssClass="header_table" />
                 </asp:TemplateField>
-               <%-- <asp:TemplateField HeaderText="Atender" Visible="true" ControlStyle-Width="20px" meta:resourcekey="TemplateFieldResource3">
-                    <ItemTemplate>
-                        <button runat="server" id="BtnAtender" class="btnAtender" onserverclick="BtnAtender_ServerClick" meta:resourcekey="BtnAtenderResource"></button>
-                    </ItemTemplate>
-                    <HeaderStyle Width="88" HorizontalAlign="Center" CssClass="header_table" />
-                </asp:TemplateField>--%>
             </Columns>
         </asp:GridView>
     </div>

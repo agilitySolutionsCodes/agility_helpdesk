@@ -152,7 +152,7 @@ namespace BLL
             if (chamadoBLL != null)
             {
                 chamadoDAL = new ChamadosDAL();
-                
+                chamadoDAL.InsereComentarioChamado(chamadoBLL);
             }
 
             return chamadoBLL;

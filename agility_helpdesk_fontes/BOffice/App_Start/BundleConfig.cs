@@ -32,15 +32,6 @@ namespace BOffice
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                 "~/Scripts/modernizr-*"));
 
-            //bundles.Add(new StyleBundle("~/Style/Css/css").Include(
-            //    "~/Style/Css/Site.css",
-            //    "~/Style/Css/Categoria.css",
-            //    "~/Style/Css/Classificacoes.css",
-            //    "~/Style/Css/Conta.css",
-            //    "~/Style/Css/Contato.css",
-            //    "~/Style/Css/Home.css",
-            //    "~/Style/Css/Usuarios.css"));
-
             bundles.Add(new ScriptBundle("~/bundles/JQueryValidator").Include(
                 "~/Scripts/jquery-1.9.0.min.js",
                 "~/Scripts/jquery.maskedinput.js",

@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BOffice._Default" %>
 
+<asp:Content ID="ContentHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <title><%: Page.Title %>- Gerenciador de Conteúdo </title>
+    <meta name="description" content="Gerenciador de conteúdo sistema Web Help-Desk Agility Solutions" />
+</asp:Content>
+
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <div id="content_acesso">
         <div id="inner_content_">

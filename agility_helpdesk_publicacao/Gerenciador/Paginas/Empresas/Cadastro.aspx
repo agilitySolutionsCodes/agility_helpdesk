@@ -2,9 +2,6 @@
 
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContent" runat="server">
     <title><%: Page.Title %>- Cadastro de Empresas Gerenciador de Conteúdo </title>
-    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
-        <%: Scripts.Render("~/bundles/JQueryValidator") %>
-    </asp:PlaceHolder>
     <meta name="description" content="Gerenciador de conteúdo sistema Web Help-Desk Agility Solutions" />
 </asp:Content>
 

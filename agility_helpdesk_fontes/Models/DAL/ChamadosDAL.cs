@@ -161,17 +161,17 @@ namespace DAL
             sqlCmd.ExecuteReader(CommandBehavior.CloseConnection);
         }
 
-        public void InsereComentarioChamado(int idChamado, string descricao, int idUsuario, DateTime dataComentario)
+        public void InsereComentarioChamado(Chamado chamadoDAL)
         {
             SqlConnection sqlCon = conexao.GetConexao();
             SqlCommand sqlCmd = new SqlCommand("STP_Insere_Comentario_Chamado", sqlCon);
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.CommandTimeout = sqlCon.ConnectionTimeout;
 
-            sqlCmd.Parameters.Add(new SqlParameter("@P_IdChamado", idChamado));
-            sqlCmd.Parameters.Add(new SqlParameter("@P_IdUsuario", idChamado));
-            sqlCmd.Parameters.Add(new SqlParameter("@P_Comentario", idChamado));
-            sqlCmd.Parameters.Add(new SqlParameter("@P_Data", idChamado));
+            sqlCmd.Parameters.Add(new SqlParameter("@P_IdChamado", chamadoDAL.IdChamado));
+            sqlCmd.Parameters.Add(new SqlParameter("@P_IdUsuario", chamadoDAL.Solicitante));
+            sqlCmd.Parameters.Add(new SqlParameter("@P_Comentario", chamadoDAL.Observacao));
+            sqlCmd.Parameters.Add(new SqlParameter("@P_Data", chamadoDAL.DataModificacao));
 
             sqlCmd.ExecuteReader(CommandBehavior.CloseConnection);
         }

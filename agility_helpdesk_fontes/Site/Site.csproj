@@ -131,13 +131,6 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
-    <Content Include="Js\Categoria.js" />
-    <Content Include="Js\CentroCusto.js" />
-    <Content Include="Js\Chamados.js" />
-    <Content Include="Js\Classificacao.js" />
-    <Content Include="Js\Contato.js" />
-    <Content Include="Js\Empresa.js" />
-    <Content Include="Js\Usuario.js" />
     <Content Include="Paginas\Busca\Index.aspx" />
     <Content Include="Paginas\Chamados\Detalhe.aspx" />
     <Content Include="Paginas\Chamados\Fila.aspx" />
@@ -154,6 +147,7 @@
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Style\Css\jquery-ui.css" />
     <Content Include="Style\Css\Site.css" />
+    <Content Include="Style\Images\atender.png" />
     <Content Include="Style\Images\baloon.png" />
     <Content Include="Style\Images\bg_content.jpg" />
     <Content Include="Style\Images\bg_header2.jpg" />
@@ -424,6 +418,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Js\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>

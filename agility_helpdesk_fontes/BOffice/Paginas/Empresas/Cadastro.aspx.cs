@@ -13,7 +13,6 @@ using BLL;
 
 namespace BOffice.Empresas
 {
-    #region Empresas
     public partial class Cadastro : System.Web.UI.Page
     {
         #region Eventos
@@ -143,7 +142,6 @@ namespace BOffice.Empresas
             {
                 empresa = new Empresa();
             }
-            //Se campos foram preenchidos atribui os valores aos objetos
 
             if (!string.IsNullOrEmpty(TxtCNPJ.Value))
             {
@@ -344,5 +342,4 @@ namespace BOffice.Empresas
 
         #endregion
     }
-    #endregion
 }

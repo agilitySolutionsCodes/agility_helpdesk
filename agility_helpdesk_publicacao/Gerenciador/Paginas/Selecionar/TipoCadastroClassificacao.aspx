@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TipoCadastroClassificacao.aspx.cs" Inherits="BOffice.CentroCustos.Selecionar.TipoCadastroClassificacao" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="ContentHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <title><%: Page.Title %>- Selecionar tipo de cadastro de classificação Gerenciador de Conteúdo </title>
+    <meta name="description" content="Gerenciador de conteúdo sistema Web Help-Desk Agility Solutions" />
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div id="content_acesso">
         <div id="inner_content_">

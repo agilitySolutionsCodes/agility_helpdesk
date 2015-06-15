@@ -44,7 +44,6 @@ namespace BOffice.CentroCustos
 
         protected void GrdCentroCusto_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            //Mudar código aqui para melhorar performance
             DataTable dt = new DataTable();
             CentroCustosBLL centroCustoBLL = new CentroCustosBLL();
 
@@ -63,7 +62,6 @@ namespace BOffice.CentroCustos
 
         protected void GrdCentroCusto_SelectedIndexChanged(object sender, GridViewPageEventArgs e)
         {
-            //Mudar código aqui para melhorar performance
             DataTable dt = new DataTable();
             CentroCustosBLL centroCustoBLL = new CentroCustosBLL();
 
@@ -112,7 +110,7 @@ namespace BOffice.CentroCustos
 
             dt = centroCustoBLL.GetCentrosCusto(usuario);
 
-            //Validação para mudança de valores no grid referente a status do chamado
+            //Exibição Status Chamado
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows[i]["Classe"].ToString() == "A ")

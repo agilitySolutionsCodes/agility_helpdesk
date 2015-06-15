@@ -94,15 +94,6 @@ namespace Site.Paginas.Chamados {
         protected global::System.Web.UI.WebControls.Literal LtlDescricao;
         
         /// <summary>
-        /// TxtComentario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea TxtComentario;
-        
-        /// <summary>
         /// rptComentarios control.
         /// </summary>
         /// <remarks>
@@ -112,13 +103,40 @@ namespace Site.Paginas.Chamados {
         protected global::System.Web.UI.WebControls.Repeater rptComentarios;
         
         /// <summary>
-        /// BtnFinalizar control.
+        /// LnkComentario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton BtnFinalizar;
+        protected global::System.Web.UI.WebControls.LinkButton LnkComentario;
+        
+        /// <summary>
+        /// TxtComentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea TxtComentario;
+        
+        /// <summary>
+        /// ValidadorComentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorComentario;
+        
+        /// <summary>
+        /// BtnEnviar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton BtnEnviar;
         
         /// <summary>
         /// BtnCancelar control.
@@ -128,5 +146,14 @@ namespace Site.Paginas.Chamados {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton BtnCancelar;
+        
+        /// <summary>
+        /// BtnFinalizar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton BtnFinalizar;
     }
 }

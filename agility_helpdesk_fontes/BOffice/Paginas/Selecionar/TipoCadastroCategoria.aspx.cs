@@ -15,7 +15,7 @@ namespace BOffice.CentroCustos.Selecionar
             {
                 if (Session["IdUsuario"] != null)
                 {
-                    //Do something
+
                 }
 
                 else

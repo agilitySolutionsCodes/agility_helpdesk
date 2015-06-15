@@ -48,8 +48,6 @@ namespace BOffice.Classificacoes
 
         protected void GrdClassificacoes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            //Mudar código aqui para melhorar performance
-
             DataTable dt = new DataTable();
 
             Usuario usuario = null;

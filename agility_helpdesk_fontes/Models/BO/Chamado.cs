@@ -24,6 +24,7 @@ namespace BO
         private string status;
         private string observacao;
         private DateTime dataFinalizacao;
+        private DateTime dataModificacao;
         private Boolean ok;
 
         #endregion
@@ -44,6 +45,7 @@ namespace BO
         public string Status { get { return status; } set { status = value; } }
         public string Observacao { get { return observacao; } set { observacao = value; } }
         public DateTime DataFinalizacao { get { return dataFinalizacao; } set { dataFinalizacao = value; } }
+        public DateTime DataModificacao { get { return dataModificacao; } set { dataModificacao = value; } }
         public Boolean Ok { get { return ok; } set { ok = value; } }
 
         #endregion

@@ -44,7 +44,6 @@ namespace BOffice.Categorias
 
         protected void GrdCategorias_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            //Mudar código aqui para melhorar performance
             DataTable dt = new DataTable();
             CategoriaBLL categoriaBLL = new CategoriaBLL();
 
@@ -63,8 +62,6 @@ namespace BOffice.Categorias
 
         protected void GrdCategorias_SelectedIndexChanged(object sender, GridViewPageEventArgs e)
         {
-            //Mudar código aqui para melhorar performance
-
             DataTable dt = new DataTable();
             CategoriaBLL categoriaBLL = new CategoriaBLL();
 

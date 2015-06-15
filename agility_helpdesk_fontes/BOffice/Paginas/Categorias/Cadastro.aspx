@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cadastro.aspx.cs" Inherits="BOffice.Categorias.Cadastro" %>
 
-<asp:Content ID="HeaderCategorias" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="ContentHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <title><%: Page.Title %>- Cadastro de Categorias Gerenciador de Conteúdo </title>
+    <meta name="description" content="Gerenciador de conteúdo sistema Web Help-Desk Agility Solutions" />
 </asp:Content>
 
 <asp:Content ID="MainContentCategorias" ContentPlaceHolderID="MainContent" runat="server">

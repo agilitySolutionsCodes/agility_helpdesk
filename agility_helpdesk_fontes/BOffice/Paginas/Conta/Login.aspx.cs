@@ -14,7 +14,6 @@ using BLL;
 
 namespace BOffice.Conta
 {
-    #region Login
     public partial class Login : System.Web.UI.Page
     {
         #region Eventos
@@ -104,5 +103,4 @@ namespace BOffice.Conta
 
         #endregion
     }
-    #endregion 
 }

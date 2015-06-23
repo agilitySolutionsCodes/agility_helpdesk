@@ -18,7 +18,6 @@ namespace AgilityHelpDesk.Util
 
         public void SendEmail(string para, string assunto, string mensagem, string nomeUsuario, string linkAcesso, DateTime dataEmail)
         {
-
             string hostSmtp = ConfigurationManager.AppSettings["smtpHost"];
             int portaSmtp = Convert.ToInt32(ConfigurationManager.AppSettings["smtpPort"]);
             string mailFrom = ConfigurationManager.AppSettings["mailFrom"];

@@ -10,7 +10,6 @@ using System.Configuration;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
 
-
 namespace AgilityHelpDesk.Util
 {
     public class EmailSite

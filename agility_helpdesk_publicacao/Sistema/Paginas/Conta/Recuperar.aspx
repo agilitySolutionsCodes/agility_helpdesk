@@ -8,9 +8,9 @@
                     <img src="Style/Images/tit-login-left.png" width="448" height="71" />
                 </div>
                 <div id="txt_login">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, nostrud quis
+                     Nossa ferramenta tem como principal funcionalidade controlar chamados técnicos e gerenciar seus atendimentos permitindo que você tenha total
                     <br />
-                    quis nostrud exercitation laboris nisi ut aliquip ex ea commodo consequat ipsum . 
+                    controle sobre sua empresa ou departamento e muito mais! 
                 </div>
             </div>
             <div id="login_divisoria"></div>

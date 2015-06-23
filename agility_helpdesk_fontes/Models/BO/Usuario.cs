@@ -49,31 +49,5 @@ namespace BO
         public string Perfil { get { return perfil; } set { perfil = value; } }
 
         #endregion
-
-        #region Construtor
-
-        public Usuario()
-        {
-            //Contrutor 
-            this.idUsuario = 0;
-            this.nome = string.Empty;
-            this.email = string.Empty;
-            this.senha = string.Empty;
-            this.imagem = string.Empty;
-            this.departamento = 0;
-            this.cargo = string.Empty;
-            this.telefone = string.Empty;
-            this.ramal = string.Empty;
-            this.empresa = 0;
-            this.ativo = false;
-            this.online = false;
-            this.administrador = false;
-            this.perfil = string.Empty;
-
-            //Propriedade criada para validação de cadastro
-            this.ok = false;
-        }
-
-        #endregion
     }
 }

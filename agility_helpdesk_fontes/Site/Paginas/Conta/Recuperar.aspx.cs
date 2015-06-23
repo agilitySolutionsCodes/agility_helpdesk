@@ -50,7 +50,6 @@ namespace Site.Paginas.Conta
                 usuario = usuarioBLL.GetUsuarioPorEmail(usuario.Email);
                 if (usuario.IdUsuario == 0 && usuario.Email == string.Empty)
                 {
-                    //ScriptManager.RegisterClientScriptBlock(BtnRecuperar, BtnRecuperar.GetType(), "msgAlerta", "alert('O e-mail informado não foi localizado no sistema.');", true);
                     ValidadorEmail.IsValid = false;
                     ValidadorEmail.ErrorMessage = "O e-mail informado não foi localizado no sistema.";
                     ValidadorEmail.SetFocusOnError = true;
@@ -61,12 +60,13 @@ namespace Site.Paginas.Conta
                     //Envia e-mail com dados do cadastro realizado
                     EmailSite email = new EmailSite();
                     //Popula HTML e-mail
-                    string htmlEmail = PopulaHtml(Server.MapPath("~/Templates/RecuperacaoSenha.html"), usuario.Nome, "", DateTime.Now);
+                    string htmlEmail = PopulaHtml(Server.MapPath("~/Templates/RecuperacaoSenha.html"), usuario.Nome, usuario.Senha, DateTime.Now);
                     // Envia E-mail
-                    email.SendEmail("yule.souza@outlook.com", "Nova Senha Sistema Help-Desk", htmlEmail, Server.MapPath("~/Templates/EmailNovaCategoria.html"),
-                                    usuario.Nome, usuario.Senha, DateTime.Now);
+                    email.SendEmail(usuario.Email, "Nova Senha Sistema Help-Desk", htmlEmail, Server.MapPath("~/Templates/RecuperacaoSenha.html"), usuario.Nome, 
+                                    usuario.Senha, DateTime.Now);
                     //Método de envio de e-mail aqui
                     ScriptManager.RegisterClientScriptBlock(BtnRecuperar, BtnRecuperar.GetType(), "msgAlerta", "alert('Uma nova senha foi enviada para seu e-mail.');", true);
+                    
                     LimpaCampos();
                 }
             }
@@ -116,10 +116,10 @@ namespace Site.Paginas.Conta
             string corpoEmail = "";
             StreamReader streamReader = new StreamReader(caminhoHTML);
             corpoEmail = streamReader.ReadToEnd();
-            //Preenche campos do HTML com os dados do cadastro realizado
+
             corpoEmail = corpoEmail.Replace("{NomeUsuario}", nomeUsuario);
             corpoEmail = corpoEmail.Replace("{NovaSenha}", novaSenha);
-            corpoEmail = corpoEmail.Replace("{DataEnvio}", dataEnvio.ToString("{0:d/M/yyyy}"));
+            corpoEmail = corpoEmail.Replace("{DataEnvio}", dataEnvio.ToString("dd/MM/yyyy"));
 
             return corpoEmail;
         }

@@ -15,6 +15,8 @@ namespace BLL
     {
         #region Objetos
 
+        EmpresaDAL empresaDAL;
+
         #endregion
 
         #region Métodos
@@ -25,7 +27,7 @@ namespace BLL
 
             if (UsuarioBLL != null)
             {
-                EmpresaDAL empresaDAL = new EmpresaDAL();
+                empresaDAL = new EmpresaDAL();
                 dt = empresaDAL.GetEmpresas(UsuarioBLL.IdUsuario);    
             }
 
@@ -35,7 +37,7 @@ namespace BLL
         public DataTable GetCentroCusto(Usuario usuarioBLL)
         {
             DataTable dt = new DataTable();
-            EmpresaDAL empresaDAL = new EmpresaDAL();
+            empresaDAL = new EmpresaDAL();
 
             dt = empresaDAL.GetCentroCusto(usuarioBLL);
             
@@ -46,7 +48,7 @@ namespace BLL
             {
                 if (empresaBLL != null)
                 {
-                    EmpresaDAL empresaDAL = new EmpresaDAL();
+                    empresaDAL = new EmpresaDAL();
                     empresaDAL.InsereNovaEmpresa(empresaBLL);   
                 }
             }
@@ -55,7 +57,7 @@ namespace BLL
         {
             if (empresaBLL.IdEmpresa != 0)
             {
-                EmpresaDAL empresaDAL = new EmpresaDAL();
+                empresaDAL = new EmpresaDAL();
                 empresaDAL.AtualizaEmpresaPorId(empresaBLL);    
             }
         }
@@ -64,7 +66,7 @@ namespace BLL
         {
             if (idEmpresa != 0)
 	        {
-                EmpresaDAL empresaDAL = new EmpresaDAL();
+                empresaDAL = new EmpresaDAL();
                 empresaDAL.DeletaEmpresaPorId(idEmpresa);
 	        }        
         }
@@ -72,7 +74,7 @@ namespace BLL
         public Boolean ValidaCNPJ(string cnpj)
         {
             Empresa empresa = new Empresa();
-            EmpresaDAL empresaDAL = new EmpresaDAL();
+            empresaDAL = new EmpresaDAL();
             empresa.Ok = empresaDAL.ValidaCNPJ(cnpj);
 
             return empresa.Ok;
@@ -84,7 +86,7 @@ namespace BLL
             
             if (idEmpresa != 0)
             {
-                EmpresaDAL empresaDAL = new EmpresaDAL();
+                empresaDAL = new EmpresaDAL();
                 dt = empresaDAL.GetEmpresaPorId(idEmpresa);
             }
 

@@ -14,6 +14,8 @@ namespace BLL
     {
         #region Objetos
 
+        CentroCustoDAL centroCustoDAL;
+
         #endregion
 
         #region Métodos
@@ -22,7 +24,7 @@ namespace BLL
         {
             if (centroCustoBLL != null)
             {
-                CentroCustoDAL centroCustoDAL = new CentroCustoDAL();
+                centroCustoDAL = new CentroCustoDAL();
                 centroCustoDAL.InsereCentroCusto(centroCustoBLL);
             }
         }
@@ -31,7 +33,7 @@ namespace BLL
         {
             if (centroCustoBLL != null)
             {
-                CentroCustoDAL centroCustoDAL = new CentroCustoDAL();
+                centroCustoDAL = new CentroCustoDAL();
                 centroCustoDAL.AtualizaCentroCustoPorId(centroCustoBLL);
             }
         }
@@ -39,7 +41,7 @@ namespace BLL
         public DataTable GetCentrosCusto(Usuario usuarioBLL)
         {
             DataTable dt = new DataTable();
-            CentroCustoDAL centroCustoDAL = new CentroCustoDAL();
+            centroCustoDAL = new CentroCustoDAL();
             dt = centroCustoDAL.GetCentrosCusto(usuarioBLL);
             
             return dt;
@@ -49,7 +51,7 @@ namespace BLL
         {
             if (idCentroCustoBLL != 0)
             {
-                CentroCustoDAL centroCustoDAL = new CentroCustoDAL();
+                centroCustoDAL = new CentroCustoDAL();
                 centroCustoDAL.DeletaCentroCustoPorId(idCentroCustoBLL);
             }
         }
@@ -60,7 +62,7 @@ namespace BLL
 
             if (idCentroCustoBLL != 0)
             {
-                CentroCustoDAL centroCustoDAL =  new CentroCustoDAL();
+                centroCustoDAL =  new CentroCustoDAL();
                 dt = centroCustoDAL.GetCentrosCustoPorId(idCentroCustoBLL);
             }
 

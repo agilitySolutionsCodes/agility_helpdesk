@@ -49,31 +49,5 @@ namespace BO
         public int? CodigoMatriz { get { return codigoMatriz; } set { codigoMatriz = value; } }
 
         #endregion
-
-        #region Construtor
-
-        public Empresa()
-        {
-            //Construtor inicializa as propriedades com valores 0 ou null
-
-            this.idEmpresa = 0;
-            this.cnpj = string.Empty;
-            this.razaoSocial = string.Empty;
-            this.nomeFantasia = string.Empty;
-            this.endereco = string.Empty;
-            this.uf = string.Empty;
-            this.cidade = string.Empty;
-            this.cep = string.Empty;
-            this.telefone = string.Empty;
-            this.email = string.Empty;
-            this.empresaPertencente = string.Empty;
-            this.ativo = false;
-            //Propriedade criada para validação de cadastro
-            this.ok = false;
-            this.matriz = true;
-            this.codigoMatriz = null;
-        }
-
-        #endregion
     }
 }

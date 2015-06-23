@@ -79,10 +79,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:31</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>06/15/2015 16:49:16</publishTime>
+      <publishTime>06/23/2015 14:23:10</publishTime>
     </File>
     <File Include="bin/Site.dll">
-      <publishTime>06/15/2015 16:49:16</publishTime>
+      <publishTime>06/23/2015 14:23:10</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
       <publishTime>10/17/2013 10:27:28</publishTime>
@@ -133,7 +133,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/15/2015 13:34:34</publishTime>
     </File>
     <File Include="Paginas/Chamados/Detalhe.aspx">
-      <publishTime>06/15/2015 16:12:11</publishTime>
+      <publishTime>06/19/2015 11:35:42</publishTime>
     </File>
     <File Include="Paginas/Chamados/Fila.aspx">
       <publishTime>06/15/2015 13:35:24</publishTime>
@@ -145,10 +145,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2015 14:05:06</publishTime>
     </File>
     <File Include="Paginas/Conta/Login.aspx">
-      <publishTime>06/09/2015 17:28:51</publishTime>
+      <publishTime>06/19/2015 14:02:17</publishTime>
     </File>
     <File Include="Paginas/Conta/Recuperar.aspx">
-      <publishTime>04/29/2015 14:05:18</publishTime>
+      <publishTime>06/19/2015 11:36:17</publishTime>
     </File>
     <File Include="Paginas/Error/404.aspx">
       <publishTime>04/29/2015 15:30:33</publishTime>
@@ -607,7 +607,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/20/2014 12:25:13</publishTime>
     </File>
     <File Include="Templates/RecuperacaoSenha.html">
-      <publishTime>02/23/2015 10:17:34</publishTime>
+      <publishTime>06/23/2015 14:05:23</publishTime>
     </File>
     <File Include="Uploads/Yule.jpg">
       <publishTime>02/27/2013 17:43:43</publishTime>
@@ -616,7 +616,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/17/2013 10:27:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/15/2015 16:49:17</publishTime>
+      <publishTime>06/23/2015 14:23:11</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -5,11 +5,7 @@
 <head id="Head1" runat="server">
     <meta charset="utf-8" />
     <title><%: Page.Title %> - Gerenciador Help-Desk Agility</title>
-    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
-        <%--<%: Scripts.Render("~/bundles/modernizr") %>--%>
-        <%--<%: Styles.Render("~/Style/Css/css") %>--%>
-    </asp:PlaceHolder>
-    <%--<webopt:BundleReference ID="BundleReference" runat="server" Path="~/Style/Css" />--%>
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
     <link rel="stylesheet" type="text/css" href="Style/Css/Site.css">
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
@@ -21,7 +17,6 @@
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
                 <%--Framework Scripts--%>
-
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="jquery.ui.combined" />

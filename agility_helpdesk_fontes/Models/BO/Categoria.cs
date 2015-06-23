@@ -27,19 +27,5 @@ namespace BO
         public int Empresa { get { return empresa; } set { empresa = value; } }
 
         #endregion
-
-        #region Construtor
-
-        public Categoria()
-        {
-            //Construtor inicializa as propriedades com valores 0 ou null
-            this.idCategoria = 0;
-            this.nome = string.Empty;
-            this.descricao = string.Empty;
-            this.ativo = false;
-            this.empresa = 0;
-        }
-
-        #endregion
     }
 }

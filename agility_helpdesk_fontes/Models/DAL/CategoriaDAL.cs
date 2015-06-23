@@ -13,9 +13,9 @@ namespace DAL
 {
     public class CategoriaDAL
     {
-        #region Propriedades
+        #region Objetos
 
-        HelpDeskConexao conexao = new HelpDeskConexao();
+        HelpDeskConexao conexao;
         
         #endregion
 
@@ -25,6 +25,8 @@ namespace DAL
         {
             DataTable dt = new DataTable();
 
+            conexao = new HelpDeskConexao();
+            
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Lista_Categorias", sqlCon);
@@ -42,6 +44,9 @@ namespace DAL
         public void InsereNovaCategoria(Categoria categoriaDAL)
         {
             SqlCommand sqlCmd;
+
+            conexao = new HelpDeskConexao();
+
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
 
@@ -61,6 +66,9 @@ namespace DAL
         public void AtualizaCategoriaPorId(Categoria categoriaDAL)
         {
             SqlCommand sqlCmd;
+
+            conexao = new HelpDeskConexao();
+
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
 
@@ -80,6 +88,9 @@ namespace DAL
         public void DeletaCategoriaPorId(int idCategoria)
         {
             SqlCommand sqlCmd;
+
+            conexao = new HelpDeskConexao();
+
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Deleta_Categoria", sqlCon);
 
@@ -96,6 +107,9 @@ namespace DAL
         public DataTable GetCategoriaPorId(int idCategoria)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Lista_Categorias_Por_Id", sqlCon);

@@ -29,21 +29,5 @@ namespace BO
         public DateTime DataContato { get { return dataContato; } set { dataContato = value; } }
 
         #endregion 
-
-        #region Construtor
-
-        public Contato()
-        {
-            //Construtor inicializa as propriedades com valores 0 ou null
-
-            this.idContato = 0;
-            this.nome = string.Empty;
-            this.email = string.Empty;
-            this.assunto = string.Empty;
-            this.mensagem = string.Empty;
-            this.dataContato = DateTime.Now;
-        }
-
-        #endregion
     }
 }

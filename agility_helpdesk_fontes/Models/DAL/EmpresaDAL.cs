@@ -15,7 +15,7 @@ namespace DAL
     {
         #region Propriedades
 
-        HelpDeskConexao conexao = new HelpDeskConexao();
+        HelpDeskConexao conexao;
 
         #endregion
 
@@ -24,6 +24,8 @@ namespace DAL
         public DataTable GetEmpresas(int IdUsuarioDAL)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
 
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
@@ -43,6 +45,9 @@ namespace DAL
         public DataTable GetCentroCusto(Usuario usuarioDAL)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -60,6 +65,8 @@ namespace DAL
 
         public void InsereNovaEmpresa(Empresa empresaDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -95,6 +102,8 @@ namespace DAL
 
         public void AtualizaEmpresaPorId(Empresa empresaDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -121,6 +130,8 @@ namespace DAL
 
         public void DeletaEmpresaPorId(int idEmpresa)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Deleta_Empresa", sqlCon);
@@ -137,6 +148,8 @@ namespace DAL
 
         public Boolean ValidaCNPJ(string cnpj)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -160,6 +173,8 @@ namespace DAL
 
         public DataTable GetEmpresaPorId(int idEmpresa)
         {
+            conexao = new HelpDeskConexao();
+
             DataTable dt = new DataTable();
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();

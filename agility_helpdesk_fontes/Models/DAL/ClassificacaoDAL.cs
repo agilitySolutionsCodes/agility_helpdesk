@@ -15,7 +15,7 @@ namespace DAL
     {
         #region Objetos
 
-        HelpDeskConexao conexao = new HelpDeskConexao();
+        HelpDeskConexao conexao;
 
         #endregion
 
@@ -24,6 +24,8 @@ namespace DAL
         public DataTable GetClassificacoes(Usuario usuarioDAL)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
 
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
@@ -43,6 +45,8 @@ namespace DAL
 
         public void InsereNovaClassificacao(Classificacao classificacaoDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -61,6 +65,8 @@ namespace DAL
 
         public void AtualizaClassificacaoPorId(Classificacao classificacaoDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -79,6 +85,8 @@ namespace DAL
 
         public void DeletaClassificacaoPorId(int idClassificacao)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Deleta_Classificacao", sqlCon);
@@ -95,6 +103,8 @@ namespace DAL
 
         public DataTable GetClassificacaoPorId(int idClassificacao)
         {
+            conexao = new HelpDeskConexao();
+
             DataTable dt = new DataTable();
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();

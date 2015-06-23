@@ -16,7 +16,7 @@ namespace DAL
     {
         #region Propriedades
 
-        HelpDeskConexao conexao = new HelpDeskConexao();
+        HelpDeskConexao conexao;
 
         #endregion
 
@@ -25,6 +25,8 @@ namespace DAL
         public DataTable GetNumeroChamadosFinalizados(int idEmpresaDAL, string statusFiltro)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
 
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
@@ -45,6 +47,9 @@ namespace DAL
         public DataTable BuscaChamadoPorPalavraChave(string palavraChave)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Busca", sqlCon);
@@ -63,6 +68,9 @@ namespace DAL
         public DataTable ListaChamadosPorId(int idUsuario)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Lista_Chamados_Por_Id", sqlCon);
@@ -84,6 +92,8 @@ namespace DAL
         {
             DataTable dt = new DataTable();
 
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Lista_Chamados", sqlCon);
@@ -103,6 +113,9 @@ namespace DAL
         public DataTable ListaDetalheChamado(int idChamado)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
+
             SqlConnection sqlCon = conexao.GetConexao();
             SqlCommand sqlCmd = new SqlCommand("STP_Lista_Detalhe_Chamado", sqlCon);
 
@@ -122,6 +135,9 @@ namespace DAL
         public DataTable ListaHistoricoComentario(int idChamado)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
+
             SqlConnection sqlCon = conexao.GetConexao();
             SqlCommand sqlCmd = new SqlCommand("STP_Lista_Detalhe_Chamado_Historico", sqlCon);
             sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -137,6 +153,8 @@ namespace DAL
 
         public void InsereChamado(Chamado chamado)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -163,6 +181,8 @@ namespace DAL
 
         public void InsereComentarioChamado(Chamado chamadoDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlConnection sqlCon = conexao.GetConexao();
             SqlCommand sqlCmd = new SqlCommand("STP_Insere_Comentario_Chamado", sqlCon);
             sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -178,6 +198,8 @@ namespace DAL
 
         public Chamado InsereNovoChamado(Chamado chamadoDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -216,6 +238,8 @@ namespace DAL
 
         public void AtulizaChamadoPorId(Chamado chamadoDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -246,6 +270,8 @@ namespace DAL
 
         public Chamado AtenderChamado(int IdUsuario, int IdChamado)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -274,6 +300,8 @@ namespace DAL
 
         public Chamado FinalizarChamadoAprovacao(int idUsuario, int idChamado, string observacao)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -304,6 +332,8 @@ namespace DAL
 
         public Chamado FinalizarChamado(int idUsuario, int idChamado)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();

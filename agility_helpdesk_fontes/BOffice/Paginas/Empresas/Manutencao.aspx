@@ -29,9 +29,6 @@
                 <Columns>
                     <asp:TemplateField HeaderText=" Ações" ItemStyle-Width="65" meta:resourcekey="TemplateFieldResource1">
                         <ItemTemplate>
-                      <%--<asp:ImageButton runat="server" ID="BtnDeletar" OnClick="BtnDeletar_Click" OnClientClick="javascript:return confirm('Deseja excluir este registro?');"
-                                CausesValidation="False" CommandName="Deletar" CommandArgument='<%# Bind("IdEmpresa") %>'
-                                ImageUrl="~/Style/Images/excluir.png" meta:resourcekey="BtnDeletarResource1" Height="16px" Width="16px" BorderColor="Transparent" BackColor="Transparent" />--%>
                             <asp:ImageButton runat="server" ID="BtnEditar" OnClick="BtnEditar_Click" OnClientClick="javascript:return confirm('Deseja alterar este registro?');"
                                 CausesValidation="False" CommandName="Editar" ImageUrl="~/Style/Images/alterar.png"
                                 meta:resourcekey="BtnEditarResource1" Height="16px" Width="16px" BorderColor="Transparent" BackColor="Transparent" />

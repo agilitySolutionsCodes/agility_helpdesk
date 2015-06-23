@@ -13,9 +13,9 @@ namespace DAL
 {
     public class CentroCustoDAL
     {
-        #region Propriedades
+        #region Objetos
 
-        HelpDeskConexao conexao = new HelpDeskConexao();
+        HelpDeskConexao conexao;
 
         #endregion
 
@@ -23,6 +23,8 @@ namespace DAL
 
         public void InsereCentroCusto(CentroCusto centroCustoDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -41,6 +43,8 @@ namespace DAL
 
         public void AtualizaCentroCustoPorId(CentroCusto centroCustoDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -61,6 +65,8 @@ namespace DAL
         {
             DataTable dt = new DataTable();
 
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Lista_CentroCusto", sqlCon);
@@ -77,6 +83,8 @@ namespace DAL
 
         public void DeletaCentroCustoPorId(int idCentroCustoDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Deleta_CentroCusto", sqlCon);
@@ -94,6 +102,9 @@ namespace DAL
         public DataTable GetCentrosCustoPorId(int idCentrosCustoDAL)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Lista_CentroCusto_Por_Id", sqlCon);

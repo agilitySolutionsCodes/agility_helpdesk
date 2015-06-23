@@ -15,7 +15,7 @@ namespace BLL
     {
         #region Objetos
 
-        ClassificacaoDAL classificacaoDAL = new ClassificacaoDAL();
+        ClassificacaoDAL classificacaoDAL;
 
         #endregion
 
@@ -24,6 +24,8 @@ namespace BLL
         public DataTable GetClassificacoes(Usuario usuarioBLL)
         {
             DataTable dt = new DataTable();
+            classificacaoDAL = new ClassificacaoDAL();
+
             dt = classificacaoDAL.GetClassificacoes(usuarioBLL);
             return dt;
         }
@@ -32,6 +34,7 @@ namespace BLL
         {
             if (classificacaoBLL != null)
             {
+                classificacaoDAL = new ClassificacaoDAL();
                 classificacaoDAL.InsereNovaClassificacao(classificacaoBLL);    
             }
         }
@@ -40,6 +43,7 @@ namespace BLL
         {
             if (classificacaoBLL != null)
             {
+                classificacaoDAL = new ClassificacaoDAL();
                 classificacaoDAL.AtualizaClassificacaoPorId(classificacaoBLL);
             }
         }
@@ -59,6 +63,7 @@ namespace BLL
 
             if (idCategoria != 0)
             {
+                classificacaoDAL = new ClassificacaoDAL();
                 dt = classificacaoDAL.GetClassificacaoPorId(idCategoria);
             }
 

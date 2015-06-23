@@ -12,7 +12,7 @@ namespace BLL
     {
         #region Objetos
 
-        ContatoDAL contatoDAL = new ContatoDAL();
+        ContatoDAL contatoDAL;
 
         #endregion
 
@@ -20,6 +20,7 @@ namespace BLL
 
         public void InsereContato(string nomeContato, string emailContato, string assuntoContato, string mensagemContato, DateTime dataContato)
         {
+            contatoDAL = new ContatoDAL();
             contatoDAL.InsereNovoContato(nomeContato, emailContato, assuntoContato, mensagemContato, dataContato);
         }
 

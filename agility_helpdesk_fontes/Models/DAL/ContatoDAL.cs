@@ -15,7 +15,7 @@ namespace DAL
     {
         #region Objetos
 
-        HelpDeskConexao conexao = new HelpDeskConexao();
+        HelpDeskConexao conexao;
         
         #endregion
 
@@ -23,6 +23,8 @@ namespace DAL
 
         public void InsereNovoContato(string nome, string email, string assunto, string mensagem, DateTime data)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();

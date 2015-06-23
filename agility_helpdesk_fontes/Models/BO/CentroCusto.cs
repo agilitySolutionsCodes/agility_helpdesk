@@ -27,19 +27,5 @@ namespace BO
         public int Empresa { get { return empresa; } set { empresa = value; } }
         
         #endregion
-
-        #region Construtor
-
-        public CentroCusto()
-        {
-            //Construtor inicializa as propriedades com valores 0 ou null
-
-            this.idCentroCusto = 0;
-            this.classe = string.Empty;
-            this.descricao = string.Empty;
-            this.ativo = false;
-        }
-
-        #endregion
     }
 }

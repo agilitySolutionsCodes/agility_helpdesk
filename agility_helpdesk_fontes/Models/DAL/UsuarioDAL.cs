@@ -16,7 +16,7 @@ namespace DAL
     {
         #region Propriedades
 
-        HelpDeskConexao conexao = new HelpDeskConexao();
+        HelpDeskConexao conexao;
 
         #endregion
 
@@ -24,6 +24,8 @@ namespace DAL
 
         public Usuario AutenticaUsuarioAdminPorSenha(string email, string senha)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -73,6 +75,8 @@ namespace DAL
 
         public Usuario AutenticarUsuarioPorSenha(string email, string senha)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -121,6 +125,8 @@ namespace DAL
 
         public Usuario RecuperaSenhaPorEmail(string email)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -164,6 +170,8 @@ namespace DAL
 
         public Usuario GetUsuarioEmail(string email)
         {
+            conexao = new HelpDeskConexao();
+
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
             SqlCommand sqlCmd = new SqlCommand("", sqlCon);
@@ -178,6 +186,8 @@ namespace DAL
 
         public Usuario InsereNovoUsuario(Usuario usuarioDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -217,6 +227,8 @@ namespace DAL
         {
             DataTable dt = new DataTable();
 
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -236,6 +248,8 @@ namespace DAL
 
         public void AtualizaUsuarioPorId(Usuario usuarioDAL)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -265,6 +279,8 @@ namespace DAL
 
         public void AtualizaSenhaUsuario(int idUsuario, string novaSenha)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd = new SqlCommand();
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -284,6 +300,8 @@ namespace DAL
 
         public void DeletaUsuarioPorId(int IdUsuario)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
             sqlCmd = new SqlCommand("STP_Deleta_Usuario", sqlCon);
@@ -300,6 +318,8 @@ namespace DAL
 
         public Boolean ValidaEmail(string email)
         {
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
@@ -321,6 +341,9 @@ namespace DAL
         public DataTable GetUsuarioPorId(int idUsuario)
         {
             DataTable dt = new DataTable();
+
+            conexao = new HelpDeskConexao();
+
             SqlCommand sqlCmd;
             SqlConnection sqlCon = conexao.GetConexao();
 

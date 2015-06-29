@@ -67,9 +67,7 @@ namespace Site.Paginas.Chamados
             //Exibe mensagem de cadastro realizado com sucesso
             ScriptManager.RegisterClientScriptBlock(BtnCadastrar, BtnCadastrar.GetType(), "msgSucesso", "alert('Chamado aberto com sucesso.');", true);
 
-            //Limpa campos após cadastro ser realizado
-            LimpaCampos();
-
+            Response.Redirect("~/Chamados-Fila");
         }
 
         protected void BtnLimpar_ServerClick(object sender, EventArgs e)
@@ -98,11 +96,13 @@ namespace Site.Paginas.Chamados
         {
             Chamado chamado = new Chamado();
 
+            chamado.CodEmpresa = Convert.ToInt32(Session["EmpresaUsuario"]);
             chamado.Categoria = Convert.ToInt32(DrpCategoria.SelectedValue);
             chamado.Classificacao = Convert.ToInt32(DrpClassificacao.SelectedValue);
             chamado.Prioridade = DrpPrioridade.SelectedValue;
             chamado.Assunto = TxtAssunto.Value;
             chamado.Descricao = TxtDescricao.Value;
+            chamado.DataAbertura = DateTime.Now;
             chamado.Solicitante = Convert.ToInt32(Session["IdUsuario"].ToString());
             chamado.Anexo = UploadImagem.FileName;
             chamado.Status = "P";

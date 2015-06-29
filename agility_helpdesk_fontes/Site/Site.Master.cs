@@ -93,10 +93,12 @@ namespace Site
                         if (usuario.Perfil == "S")
                         {
                             dvChamadosFila.Visible = false;
+                            dvNovoChamado.Visible = true;
                         }
 
                         else
                         {
+                            dvChamadosFila.Visible = true;
                             dvNovoChamado.Visible = false;
                         }
                     }

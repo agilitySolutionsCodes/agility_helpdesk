@@ -12,6 +12,7 @@ namespace BO
 
         private int idChamado;
         private string empresa;
+        private int codEmpresa;
         private string assunto;
         private int categoria;
         private int classificacao;
@@ -33,6 +34,7 @@ namespace BO
 
         public int IdChamado { get { return idChamado; } set { idChamado = value; } }
         public string Empresa { get { return empresa; } set { empresa = value; } }
+        public int CodEmpresa { get { return codEmpresa; } set { codEmpresa = value; } }
         public string Assunto { get { return assunto; } set { assunto = value; } }
         public int Categoria { get { return categoria; } set { categoria = value; } }
         public int Classificacao { get { return classificacao; } set { classificacao = value; } }

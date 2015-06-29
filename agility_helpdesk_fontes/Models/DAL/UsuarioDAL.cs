@@ -97,7 +97,7 @@ namespace DAL
             sqlCmd.Parameters.Add("@NomeUsuario", SqlDbType.VarChar, 80).Direction = ParameterDirection.Output;
             sqlCmd.Parameters.Add("@ImagemUsuario", SqlDbType.VarChar, 80).Direction = ParameterDirection.Output;
             sqlCmd.Parameters.Add("@Ativo", SqlDbType.Bit, 80).Direction = ParameterDirection.Output;
-            sqlCmd.Parameters.Add("@PerfilSistema", SqlDbType.Char, 80).Direction = ParameterDirection.Output;
+            sqlCmd.Parameters.Add("@PerfilSistema", SqlDbType.VarChar, 2).Direction = ParameterDirection.Output;
             sqlCmd.Parameters.Add("@PerfilUsuario", SqlDbType.Bit, 80).Direction = ParameterDirection.Output;
             sqlCmd.Parameters.Add("@EmpresaUsuario", SqlDbType.Int, 80).Direction = ParameterDirection.Output;
 
@@ -117,9 +117,9 @@ namespace DAL
 
             if (Convert.ToBoolean(sqlCmd.Parameters["@EmpresaUsuario"].Value != DBNull.Value))
             {
-                usuario.Empresa = Convert.ToInt32(sqlCmd.Parameters["@EmpresaUsuario"].Value);    
+                usuario.Empresa = Convert.ToInt32(sqlCmd.Parameters["@EmpresaUsuario"].Value);
             }
-            
+
             return usuario;
         }
 
@@ -201,7 +201,7 @@ namespace DAL
             // Prenche objeto usuário criado com objeto recebido como parametro
             usuario = usuarioDAL;
 
-            sqlCmd.Parameters.Add(new SqlParameter("@P_Nome", usuario.Nome));            
+            sqlCmd.Parameters.Add(new SqlParameter("@P_Nome", usuario.Nome));
             sqlCmd.Parameters.Add(new SqlParameter("@P_Email", usuario.Email));
             sqlCmd.Parameters.Add(new SqlParameter("@P_Senha", usuario.Senha));
             sqlCmd.Parameters.Add(new SqlParameter("@P_Departamento", usuario.Departamento));
@@ -232,7 +232,7 @@ namespace DAL
             SqlCommand sqlCmd;
             SqlConnection sqlCon = new SqlConnection();
             sqlCon = conexao.GetConexao();
-            sqlCmd = new SqlCommand("STP_Lista_Usuarios", sqlCon);
+            sqlCmd = new SqlCommand("STP_Lista_Usuarios_Atendentes", sqlCon);
 
             sqlCmd.Parameters.Add(new SqlParameter("@P_IdEmpresa", idEmpresaDAL));
             sqlCmd.Parameters.Add(new SqlParameter("@P_IdUsuario", idUsuarioDAL));

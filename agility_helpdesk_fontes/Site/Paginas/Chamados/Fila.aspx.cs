@@ -33,7 +33,7 @@ namespace Site.Paginas.Chamados
                 }
             }
         }
-        
+
         #endregion
 
         #region Eventos
@@ -304,7 +304,7 @@ namespace Site.Paginas.Chamados
                 drpFiltro.Visible = false;
 
                 //Exibe mensagem
-                LblMsgmChamados.Text = "Você não possui chamados em atendimento no momento";
+                LblMsgmChamados.Text = "Não existem chamados no momento";
                 LblMsgmChamados.Visible = true;
             }
 

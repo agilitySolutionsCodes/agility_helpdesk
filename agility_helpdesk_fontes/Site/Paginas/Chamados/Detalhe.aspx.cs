@@ -165,7 +165,7 @@ namespace Site.Paginas.Chamados
                         BtnCancelar.Visible = false;
                     }
 
-                    if (dtChamado.Rows[i]["StatusChamado"].ToString() == "P " || Convert.ToInt32(dtChamado.Rows[i]["Solicitante"].ToString()) == idUsuario)
+                    if (dtChamado.Rows[i]["StatusChamado"].ToString() == "P " && Convert.ToInt32(dtChamado.Rows[i]["Solicitante"].ToString()) == idUsuario)
                     {
                         BtnFinalizar.Visible = true;
                     }

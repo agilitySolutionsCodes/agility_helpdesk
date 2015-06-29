@@ -213,7 +213,7 @@ namespace DAL
             // Prenche objeto chamado criado com objeto recebido como parametro
             chamado = chamadoDAL;
 
-            sqlCmd.Parameters.Add(new SqlParameter("@P_Empresa", chamado.Empresa));
+            sqlCmd.Parameters.Add(new SqlParameter("@P_Empresa", chamado.CodEmpresa));
             sqlCmd.Parameters.Add(new SqlParameter("@P_Assunto", chamado.Assunto));
             sqlCmd.Parameters.Add(new SqlParameter("@P_CodCategoria", chamado.Categoria));
             sqlCmd.Parameters.Add(new SqlParameter("@P_CodClassificacao", chamado.Classificacao));
@@ -223,7 +223,6 @@ namespace DAL
             sqlCmd.Parameters.Add(new SqlParameter("@P_Anexo", chamado.Anexo));
             sqlCmd.Parameters.Add(new SqlParameter("@P_StatusChamado", chamado.Status));
             sqlCmd.Parameters.Add(new SqlParameter("@P_Observacao", chamado.Observacao));
-            sqlCmd.Parameters.Add(new SqlParameter("@P_DataFinalizacao", chamado.DataFinalizacao));
             sqlCmd.Parameters.Add(new SqlParameter("@P_Prioridade", chamado.Prioridade));
             sqlCmd.Parameters.Add(new SqlParameter("@P_Atendente", chamado.Atendente));
 
